@@ -1,1 +1,1 @@
-![Mike's Portfolio Image](https://photos-6.dropbox.com/t/0/AAAhZJ9e33FMd94pM5uaUeZY77pI0mESlKWJjBbTKjV9RA/12/8703035/jpeg/32x32/3/_/1/2/hash_tag.jpg/DwRkMytGjw6YopWI54rg6_BoB6tZs_XNoSU2cSZwcqo?size=1024x768)
+![Mike's Portfolio Image](https://photos-3.dropbox.com/t/0/AAAH4FBYVdpDGUFKetm7Q2WhCK-KNW1qPbNgrbLZUNWAAw/12/8703035/png/1024x768/3/1389823200/0/2/portfolio_screenshot.png/C5A1dyqGENCOueSLaBuz_GEO9D1r3yQnYL23aBKkthY)
