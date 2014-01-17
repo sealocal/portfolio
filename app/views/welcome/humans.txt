@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    <Nakome> -- <Theme Designer> -- <@Nakome>
+
+# THANKS
+
+    <Aryandhani - http://aryandhani.com/>
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    Normalize.css, Zurb Foundation 5, jQuery, Modernizr
