@@ -201,8 +201,8 @@ button, .button {
 	border: 1px solid #000;
 	color: #0C0C0C;
 }
-button:hover, 
-button:focus, 
+button:hover,
+button:focus,
 .button:hover,
 .button:focus {
 	background-color: #030303;
@@ -217,7 +217,7 @@ button:focus,
 }
 
 /* Input */
-input[type="text"], input[type="password"], 
+input[type="text"], input[type="password"],
 input[type="date"], input[type="datetime"],
 input[type="datetime-local"],
 input[type="month"], input[type="week"],
@@ -668,7 +668,7 @@ blockquote:hover {
 .window{
 	  position: relative;
 	  width:100%;
-	  padding-bottom: 75%; 
+	  padding-bottom: 75%;
 	  margin-bottom: 2em;
 	  height: 0;
 	  overflow: hidden;
@@ -704,7 +704,7 @@ blockquote:hover {
 	  -moz-box-shadow: -1.5em 0 #E29610,-3em 0 #5ACF18;
 	  box-shadow: -1.5em 0 #D35400,-3em 0 #16A085;
 }
-.window-body{ 
+.window-body{
  	 margin-top: 4em;
 }
 
@@ -714,12 +714,12 @@ blockquote:hover {
   }
   .window-body{
     width: 100%;
-  }	
+  }
 }
 
 .widget {
 	position: relative;
-	padding-bottom: 75%; 
+	padding-bottom: 75%;
 	height: 0;
 	overflow: hidden;
 }
@@ -764,7 +764,7 @@ blockquote:hover {
 
 
 
-/* #Media queries 
+/* #Media queries
 ------------------------------------------- */
 
 /* Max-width 60rem = 1024px */
@@ -781,7 +781,7 @@ blockquote:hover {
 	.tumb{
 		width: 228px;
 		height: 185px;
-	
+
 	}
 }
 /* Max-width 50rem = 800px */
@@ -798,7 +798,7 @@ blockquote:hover {
 	.tumb{
 		width: 340px;
 		height: 190px;
-	
+
 }
 }
 /* Max-width 40rem = 640px */
