@@ -6,7 +6,6 @@ gem 'foundation-rails', github: "codefellows/foundation-rails"
 gem 'jbuilder', '~> 1.2'
 gem 'jquery-rails'
 gem 'minitest-rails'
-gem 'minitest-rails-capybara'
 gem 'rails', '4.0.2'
 gem 'sass-rails', '~> 4.0.0'
 gem 'turbolinks'
@@ -26,6 +25,6 @@ group :production do
 end
 
 group :test do
-  gem 'mini-test-rails-capybara'
+  gem 'minitest-rails-capybara'
   gem 'launchy'
 end
