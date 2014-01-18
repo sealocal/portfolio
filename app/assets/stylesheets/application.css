@@ -490,7 +490,7 @@ blockquote:hover {
   line-height: 2.7em;
   text-align: center;
   -webkit-transition:background 0..8s ease,color 0.5s linear;
-  -moz-transition:background 0..8s ease,color 0.5s linear;
+  /*-moz-transition:background 0..8s ease,color 0.5s linear;*/
   transition:background 0..8s ease,color 0.5s linear;
 }
 .share_icons ul li a:hover {
