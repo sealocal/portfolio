@@ -400,7 +400,7 @@ blockquote:hover {
 /* #Themes Styles
 ------------------------------------------- */
 .masthead {
-  background: url("/assets/header.jpg") no-repeat center center fixed;
+  background: url("assets/header.jpg") no-repeat center center fixed;
   padding-bottom: 1em;
   background-size: cover;
   position: relative;
@@ -476,7 +476,7 @@ blockquote:hover {
     display: inline-block;
     margin-left: 1em;
 }
-/*.share_icons ul li a {
+.share_icons ul li a {
   border: 0.2em solid #ECECEC;
   background: #F8F8F8;
   color: #333333;
@@ -490,15 +490,15 @@ blockquote:hover {
   -webkit-transition:background 0..8s ease,color 0.5s linear;
   -moz-transition:background 0..8s ease,color 0.5s linear;
   transition:background 0..8s ease,color 0.5s linear;
-}*/
-/*.share_icons ul li a:hover {
+}
+.share_icons ul li a:hover {
   border-color: #FFFFFF;
   background: rgb(224, 224, 224);
   background: rgba(224, 224, 224, 0.25);
   -webkit-transition:background 0..8s ease,color 0.5s linear;
   -moz-transition:background 0..8s ease,color 0.5s linear;
   transition:background 0..8s ease,color 0.5s linear;
-}*/
+}
 /* Share icons colors */
 .fi-social-facebook {
     color: #0070FF;
