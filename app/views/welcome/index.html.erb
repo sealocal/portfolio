@@ -1,3 +1,6 @@
+<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+
+
         <!-- masthead -->
         <header class="masthead this_is_home">
             <div class="bck">
@@ -8,7 +11,7 @@
                             <li class="name">
                                 <h1>
                                     <a class="logo" href="./index.html">
-                                        <%= image_tag("images/favicon/logo.png", alt: "") %>
+                                        <%= image_tag("../assets/logo.png", alt: "") %>
                                     </a>
                                 </h1>
                             </li>
@@ -306,6 +309,13 @@
 
 
         <!-- JS  here -->
-        <script src="js/vendor/jquery.js"></script>
-        <script src="js/foundation.min.js"></script>
-        <script src="js/main.js"></script>
+        <%#
+        <script src="../assets/jquery.js"></script>
+        <script src="../assets/foundation.min.js"></script>
+        <script src="../assets/js/main.js"></script>
+        %>
+
+        <%# javascript_include_tag "../assets/jquery.js" %>
+        <%# javascript_include_tag "../assets/foundation.min.js" %>
+        <%# javascript_include_tag "../assets/main.js" %>
+

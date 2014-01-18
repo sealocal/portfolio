@@ -10,8 +10,8 @@
     <title><%= content_for?(:title) ? yield(:title) : "Mike Taylor : Ruby on Rails Dev" %></title>
     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-    <%= csrf_meta_tags %>
 
+    <%= csrf_meta_tags %>
 
     <meta name="description" content="This is my personal homepage.  I am a Ruby on Rails web developer and a bootcamper in the Code Fellows' Ruby on Rails bootcamp.">
     <meta name="author" content="Mike Taylor">
@@ -51,6 +51,9 @@
     <!-- <script src="js/modernizr.js"></script> -->
   </head>
   <body>
-      <%= yield %>
+  <%= yield %>
+  <%= javascript_include_tag "jquery" %>
+  <%= javascript_include_tag "foundation.min" %>
+  <%= javascript_include_tag "main" %>
   </body>
 </html>
