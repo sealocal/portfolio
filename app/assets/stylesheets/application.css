@@ -400,7 +400,7 @@ blockquote:hover {
 /* #Themes Styles
 ------------------------------------------- */
 .masthead {
-  background: url("/assets/header.jpg") no-repeat center center fixed;
+  background: url("/assets/images/header.jpg") no-repeat center center fixed;
   padding-bottom: 1em;
   background-size: cover;
   position: relative;
