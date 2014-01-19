@@ -281,7 +281,7 @@ input[type="url"]:focus, textarea:focus {
 .top-bar-section li a:not(.button),
 .top-bar-section li a:not(.button):hover ,
 .top-bar.expanded .title-area{
-  background: rgb(0,0,0);
+  background: rgb(0,0,0,0);
   background: rgba(255, 255, 255, 0);
   text-transform: uppercase;
   font-weight: 900;
@@ -400,7 +400,7 @@ blockquote:hover {
 /* #Themes Styles
 ------------------------------------------- */
 .masthead {
-  background: url("assets/header.jpg") no-repeat center center fixed;
+  background: url("header.jpg") no-repeat center center fixed;
   padding-bottom: 1em;
   background-size: cover;
   position: relative;
