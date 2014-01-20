@@ -14,10 +14,11 @@ feature "Visiting the Post Index" do
 
   scenario "with existing posts, show list" do
     #Given existing posts
-    Post.create(title: "Becoming a Code Fellow", body: "Means striving for excellence.")
+    Post.create(title: posts(:cf).title, body: posts(:cf).body)
     #When I visit /posts
     visit posts_path
     #Then the exisiting posts should be loaded
-    page.text.must_include "Becoming a Code Fellow"
+    page.text.must_include posts(:cf).title
+    page.text posts(:cf).body
   end
 end
