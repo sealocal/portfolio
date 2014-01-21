@@ -9,6 +9,8 @@ Portfolio::Application.routes.draw do
 
   get '/about' => 'welcome#about'
 
+  resources :projects
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
