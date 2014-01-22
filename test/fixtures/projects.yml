@@ -3,7 +3,7 @@ portfolio:
   name: Code Fellows Portfolio
   technologies_used: "Rails, Ruby, Git, Magic"
 
-freelance:
+social_network:
   name: MyFace
   technologies_used: "Social Networks, Rails, Hammers, Nails"
 
