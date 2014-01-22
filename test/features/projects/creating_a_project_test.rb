@@ -25,7 +25,7 @@ feature "As a site_owner, I want to add a portfolio item so that I can show off 
     #Then the form should be displayed again, with an error message
     current_path.must_match /projects$/
     page.text.must_include "Fix your project, it could not be saved!"
-    page.text.must_include "Name is too short"
+    page.text.must_include "Really? Your name is less than 2 chars?"
     page.text.must_include "Technologies used can't be blank"
   end
 end

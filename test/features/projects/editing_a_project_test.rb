@@ -3,7 +3,7 @@ require "test_helper"
 feature "As a site_owner, I want to edit a portfolio item so that I can update new project details." do
   scenario "Edit a Project" do
     #Given an existing project
-    visit edit_project_path(projects(:portfolio))
+    visit edit_project_path(projects(:online_store))
     #When an edit to the project is submitted
     fill_in "Name", with: "My Personal Website"
     click_on "Update"
@@ -22,6 +22,7 @@ feature "As a site_owner, I want to edit a portfolio item so that I can update n
     click_on "Update"
     #Then the changes should not be saved, an error
     #should be displayed, and I should be shown the edit page again
+    page.text.must_include "Really? Your name is less than 2 chars?"
     page.text.must_include "You goofed it up!"
   end
 
