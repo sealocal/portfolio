@@ -1,6 +1,9 @@
 require "test_helper"
 
 feature "As a site_owner, I want to add a portfolio item so that I can show off my work." do
+  #Fixtures can be setup from a feature test.
+  #fixtures :projects
+
   scenario "Create a New Project" do
     #Given a new project form
     visit projects_path
