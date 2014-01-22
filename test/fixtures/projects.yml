@@ -1,0 +1,9 @@
+portfolio:
+  id: 9999
+  name: Code Fellows Portfolio
+  technologies_used: "Rails, Ruby, Git, Magic"
+
+freelance:
+  name: MyFace
+  technologies_used: "Social Networks, Rails, Hammers, Nails"
+
