@@ -56,62 +56,62 @@
         <%= value %>
       </div>
     <% end %>
-      <!-- masthead -->
-      <header class="masthead this_is_home">
-        <div class="bck">
-          <div class="row">
-            <nav class="top-bar" data-topbar>
-              <ul class="title-area">
-                <!-- Title Area -->
-                <li class="name">
-                  <h1>
-                    <a class="logo" href="./index.html">
-                      <%= image_tag ("logo.png") %>
-                    </a>
-                  </h1>
-                </li>
-                <li class="toggle-topbar menu-icon">
-                  <a href="#">
-                    <span>Menu</span>
+    <!-- masthead -->
+    <header class="masthead this_is_home">
+      <div class="bck">
+        <div class="row">
+          <nav class="top-bar" data-topbar>
+            <ul class="title-area">
+              <!-- Title Area -->
+              <li class="name">
+                <h1>
+                  <a class="logo" href="./index.html">
+                    <%= image_tag ("logo.png") %>
                   </a>
-                </li>
-              </ul><!-- /.title-area -->
+                </h1>
+              </li>
+              <li class="toggle-topbar menu-icon">
+                <a href="#">
+                  <span>Menu</span>
+                </a>
+              </li>
+            </ul><!-- /.title-area -->
 
-              <section class="top-bar-section">
-                <!-- Right Nav Section -->
-                <ul class="right">
-                  <li class="active"><a href="index.html">Home</a></li>
-                  <li><i class="icon_divider  fi-asterisk size-12"></i></li>
-                  <li><a href="about.html">About Us</a></li>
-                  <li><i class="icon_divider  fi-asterisk size-12"></i></li>
-                  <li><a href="services.html">Services</a></li>
-                  <li><i class="icon_divider  fi-asterisk size-12"></i></li>
-                  <li><%= link_to "Projects", projects_path %></li>
-                  <li><i class="icon_divider  fi-asterisk size-12"></i></li>
-                  <li><a href="contact.html">Contact</a></li>
-                </ul><!-- /.right -->
-              </section><!-- /.top-bar-section -->
-            </nav> <!-- /.top-bar -->
-          </div><!-- /.row -->
-        </div><!-- /.bck -->
+            <section class="top-bar-section">
+              <!-- Right Nav Section -->
+              <ul class="right">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><i class="icon_divider  fi-asterisk size-12"></i></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><i class="icon_divider  fi-asterisk size-12"></i></li>
+                <li><a href="services.html">Services</a></li>
+                <li><i class="icon_divider  fi-asterisk size-12"></i></li>
+                <li><%= link_to "Projects", projects_path %></li>
+                <li><i class="icon_divider  fi-asterisk size-12"></i></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul><!-- /.right -->
+            </section><!-- /.top-bar-section -->
+          </nav> <!-- /.top-bar -->
+        </div><!-- /.row -->
+      </div><!-- /.bck -->
 
-        <!-- Info -->
-        <section class="info">
-            <h1 class="info_text">MINIMAL</h1>
-            <h2 class="info_text">DESIGN</h2>
-        </section><!-- / .Info -->
+      <!-- Info -->
+      <section class="info">
+          <h1 class="info_text">MINIMAL</h1>
+          <h2 class="info_text">DESIGN</h2>
+      </section><!-- / .Info -->
 
-          <!-- .share icons -->
-        <section class="share_icons">
-            <ul>
-                <li><a href="#"><i class="fi-social-facebook size-36"></i></a></li>
-                <li><a href="#"><i class="fi-social-twitter size-36"></i></a></li>
-                <li><a href="#"><i class="fi-social-youtube size-36"></i></a></li>
-                <li><a href="#"><i class="fi-social-instagram size-36"></i></a></li>
-            </ul>
-        </section><!-- / .share icons -->
-      </header><!-- /.masthead -->
+        <!-- .share icons -->
+      <section class="share_icons">
+          <ul>
+              <li><a href="#"><i class="fi-social-facebook size-36"></i></a></li>
+              <li><a href="#"><i class="fi-social-twitter size-36"></i></a></li>
+              <li><a href="#"><i class="fi-social-youtube size-36"></i></a></li>
+              <li><a href="#"><i class="fi-social-instagram size-36"></i></a></li>
+          </ul>
+      </section><!-- / .share icons -->
+    </header><!-- /.masthead -->
     <%= yield %>
-    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   </body>
 </html>

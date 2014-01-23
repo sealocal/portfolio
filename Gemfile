@@ -9,7 +9,6 @@ gem 'minitest-rails'
 gem 'rails', '4.0.2'
 gem 'sass-rails', '~> 4.0.0'
 gem 'turbolinks'
-gem 'turn'
 gem 'uglifier', '>= 1.3.0'
 
 group :development do
@@ -28,4 +27,5 @@ end
 group :test do
   gem 'minitest-rails-capybara'
   gem 'launchy'
+  gem 'turn'
 end
