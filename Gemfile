@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 ruby '2.1.0'
 
 gem 'coffee-rails', '~> 4.0.0'
-gem "foundation-rails", "~> 5.0.3"
+gem 'devise', '~> 3.2.2'
+gem 'foundation-rails', '~> 5.0.3'
 gem 'jbuilder', '~> 1.2'
 gem 'jquery-rails'
 gem 'minitest-rails'
