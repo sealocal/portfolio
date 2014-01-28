@@ -3,7 +3,7 @@ require "test_helper"
 feature "Creating a Post" do
   scenario "submitting form data creates a new post (using fixtures)" do
     #Given a signed-in user
-    sign_in(users(:author))
+    sign_in(:author)
     #Given a completed new post form
     visit new_post_path
     fill_in "Title", with: posts(:cr).title
