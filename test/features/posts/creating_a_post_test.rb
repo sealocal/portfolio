@@ -15,7 +15,7 @@ feature "Creating a Post" do
     page.text.must_include posts(:cr).title
     page.must_have_content posts(:cr).title
     page.must_have_css "#author", true
-    page.text.must_include users(:one).email
+    page.text.must_include users(:author).email
     page.text.must_include "Status: Unpublished"
   end
 
@@ -23,7 +23,7 @@ feature "Creating a Post" do
     #When an unauth user visits new_post_path
     visit new_post_path
     #Then they are alerted to sign in
-    page.must_have_content "You need to sign up before continuing"
+    page.must_have_content "You need to sign in or sign up before continuing."
   end
 
   scenario "unauth site visitors cannot see new post button" do
@@ -39,7 +39,7 @@ feature "Creating a Post" do
     # When I visit the new page
     visit new_post_path
     # Then there is no checkbox for published
-    page.wont_have_field('published')
+    page.wont_have_field("Published")
   end
 
   scenario "editors can publish" do
@@ -56,7 +56,6 @@ feature "Creating a Post" do
     fill_in "Body", with: posts(:cr).body
     check "Published"
     click_on "Create Post"
-
     # Then the published post should be shown
     page.text.must_include "Status: Published"
   end
