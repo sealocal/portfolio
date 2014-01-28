@@ -7,15 +7,15 @@
 #
 one:
   email: user1@example.com
-  encrypted_password: <%= User.new.send(:password_digest, 'password1') %>
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
 
 two:
   email: user2@example.com
-  encrypted_password: <%= User.new.send(:password_digest, 'password2') %>
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
 
 three:
   email: user3@example.com
-  encrypted_password: <%= User.new.send(:password_digest, 'password3') %>
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
 
 author:
   email: author@example.com
@@ -26,5 +26,5 @@ editor:
   encrypted_password: <%= User.new.send(:password_digest, 'editor') %>
 
 admin:
-  email: editor@example.com
-  encrypted_password: <%= User.new.send(:password_digest, 'editor') %>
+  email: admin@example.com
+  encrypted_password: <%= User.new.send(:password_digest, 'admin') %>

@@ -9,8 +9,8 @@ feature("As a user, I want to sign up for an account
     click_on "Sign Up"
     #When I register with valid info
     fill_in "Email", with: "user4@example.com"
-    fill_in "Password", with: "password4"
-    fill_in "Password confirmation", with: "password4"
+    fill_in "Password", with: "password"
+    fill_in "Password confirmation", with: "password"
     click_on "Sign up"
     #Then I should be signed up
     page.must_have_content "Sign Out"
