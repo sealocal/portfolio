@@ -1,7 +1,7 @@
 require "test_helper"
 
 feature "Creating a Post" do
-  scenario "submitting form data creates a new post (using fixtures)" do
+  scenario "As an author I want to create posts so that I can share great content with the world" do
     #Given a signed-in user
     sign_in(:author)
     #Given a completed new post form
@@ -26,14 +26,14 @@ feature "Creating a Post" do
     page.must_have_content "You need to sign in or sign up before continuing."
   end
 
-  scenario "unauth site visitors cannot see new post button" do
+  scenario "As a site visitor I should not be able to create posts so that I can't modify a site I don't own" do
     #When I visit the blog index page
     visit posts_path
     #Then I should not see the "New Post" button
     page.wont_have_link "New Post"
   end
 
-  scenario "authors can't publish" do
+  scenario "As an author I should not be able to publish posts so that I can give the editor publishing control" do
     # Given an author's account
     sign_in(:author)
     # When I visit the new page
@@ -49,7 +49,6 @@ feature "Creating a Post" do
     visit new_post_path
     #Then there is a checkbox for published
     page.must_have_field("Published")
-
 
     # When I submit the form
     fill_in "Title", with: posts(:cr).title

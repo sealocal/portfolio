@@ -1,17 +1,30 @@
 cr:
   title: Code Rails
   body: This is how I learned web development!
+  author: one
+  published: true
 
 http:
   title: Intro to HTTP
   body: It's all about the request-response cycle!
+  author: one
+  published: true
 
 cf:
   title: Becoming a Code Fellow
   body: Means striving for excellence.
   author: one
+  published: true
 
 wd:
   title: Becoming a Web Developer
   body: Means finding a job. :)
+  author: author
+  published: true
+
+unpub:
+  title: Bad Post
+  body: I have bad content.
+  author: author
+  published: false
 

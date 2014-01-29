@@ -13,4 +13,11 @@ feature "Deleting a Post" do
     page.wont_have_content "Code Rails"
     page.wont_have_content "This is how I learned web development!"
   end
+
+  scenario "As a site visitor I should not be able to delete posts so that I can't modify a site I don't own" do
+    #When I visit the blog index page
+    visit posts_path
+    #Then I should not see the "New Post" button
+    page.wont_have_link "Destroy"
+  end
 end

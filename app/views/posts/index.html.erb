@@ -13,16 +13,25 @@
 
   <tbody>
     <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.body %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <% if post.published? %>
+        <tr id="<%= dom_id(post) %>">
+          <td><%= post.title %></td>
+          <td><%= post.body %></td>
+          <td><%= link_to 'Show', post %></td>
+          <% if current_user && policy(post).update? %>
+            <td><%= link_to 'Edit', edit_post_path(post) %></td>
+          <% end %>
+          <% if current_user && policy(post).destroy? %>
+            <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
+        </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>
+
+
+
 
 <br>
 
