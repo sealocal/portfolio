@@ -11,11 +11,11 @@ class PostPolicy < ApplicationPolicy
   end
 
   def update?
-    @user.author?
+    @user.author? || @user.editor?
   end
 
   def destroy?
-    @user.author? || @user.editor?
+    @user.editor?
   end
 
   def publish?

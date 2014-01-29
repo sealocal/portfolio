@@ -31,12 +31,32 @@ feature "Editing a Post" do
     #When I visit the blog index page
     visit posts_path
     #Then I should see the "Edit" link and visit an edit_post_path
-    page.must_have_link "Edit"
-    page.all('a', :text => 'Edit')[0].click
-    current_path.must_include "edit"
-    #Then I can click update
-    fill_in "Title", with: "lorem ipsum"
-    fill_in "Body", with: "boring stuff"
-    click_on "Update Post"
+    edit_a_post
+    #Then I can fil in new info and click update
+    fill_in_and_update_post
+  end
+
+  scenario "As an editor I want to update posts so that I can fix typos " do
+    #Given an author role
+    sign_in(:editor)
+    #When I visit the blog index page
+    visit posts_path
+    #Then I should see the "Edit" link and visit an edit_post_path
+    edit_a_post
+    #Then I can fil in new info and click update
+    fill_in_and_update_post
+  end
+
+  scenario "As an editor I want to publish posts so that I can make posts live on the site" do
+    #Given an author role
+    sign_in(:editor)
+    #When I visit the blog index page
+    visit posts_path
+    #Then I should see the "Edit" link and visit an edit_post_path
+    edit_a_post
+    #Then I can click published
+    check "Published"
+    #Then I can fil in new info and click update
+    fill_in_and_update_post
   end
 end

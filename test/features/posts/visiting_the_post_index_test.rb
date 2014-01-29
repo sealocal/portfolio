@@ -17,10 +17,34 @@ feature "Visiting the Post Index" do
     #Then I should not see posts with published attribute set to falses
     page.text.must_include posts(:cf).title
     page.text posts(:cf).body
-    #TODO: I don't know if this is best pracice, but it works!
+    #TODO: I don't know if this is best practice, but it works!
+    Post.all do |post|
+      page.text.must_include post.title
+      page.text.must_include post.body
+    end
+  end
+
+  scenario "As an editor I want to see all posts regardless of published status in the blog index so that I can choose which posts to publish" do
+    #Given editor role
+    sign_in(:editor)
+    #WWhen I visit the posts index
+    visit posts_path
+    #Then I should see all posts, regardless of publish flag
     Post.where(published: false).each do |post|
       page.text.wont_include post.title
       page.text.wont_include post.body
+    end
+  end
+
+  scenario "As an author I want to only see my own posts so that I can focus on my work" do
+    #Given author role
+    sign_in(:author)
+    #WWhen I visit the posts index
+    visit posts_path
+    #Then I should see all posts, regardless of publish flag
+    Post.all.where(author: users(:author).email) do |post|
+      page.text.must_include post.title
+      page.text.must_include post.body
     end
   end
 end

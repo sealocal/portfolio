@@ -3,7 +3,8 @@ require "test_helper"
 feature "Creating a Post" do
   scenario "As an author I want to create posts so that I can share great content with the world" do
     #Given a signed-in user
-    sign_in(:author)
+    role = :author
+    sign_in(role)
     #Given a completed new post form
     visit new_post_path
     fill_in "Title", with: posts(:cr).title
@@ -11,12 +12,21 @@ feature "Creating a Post" do
     # When I submit the form
     click_on "Create Post"
     # Then a new post should be created and displayed
-    page.text.must_include "Post was successfully created"
-    page.text.must_include posts(:cr).title
-    page.must_have_content posts(:cr).title
-    page.must_have_css "#author", true
-    page.text.must_include users(:author).email
-    page.text.must_include "Status: Unpublished"
+    verify_post_creation(role)
+  end
+
+  scenario "As an editor I want to create posts so that I can share great content with the world" do
+    #Given a signed-in user
+    role = :editor
+    sign_in(role)
+    #Given a completed new post form
+    visit new_post_path
+    fill_in "Title", with: posts(:cr).title
+    fill_in "Body", with: posts(:cr).body
+    # When I submit the form
+    click_on "Create Post"
+    # Then a new post should be created and displayed
+    verify_post_creation(role)
   end
 
   scenario "unauthenticated site visitors cannot visit new_post_path" do
@@ -40,9 +50,12 @@ feature "Creating a Post" do
     visit new_post_path
     # Then there is no checkbox for published
     page.wont_have_field("Published")
+    # And I should see a 'not authorized' message if I try to hack it
+    # TODO: I don't know how to submit an HTTP DELETE request!
+    #post '/foo', data: "here"
   end
 
-  scenario "editors can publish" do
+  scenario "As an editor I want to publish posts so that I can make posts live on the site" do
     #Given an editor's account
     sign_in(:editor)
     #When I visit the new page
