@@ -1,0 +1,46 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+pat:
+  author: one
+  author_url: user_path(users(:one))
+  author_email: users(:one)
+  user_ip: users(:users).current_sign_in_ip
+  user_agent: "MyString"
+  referrer: "MyString"
+  content: "Nice post, man!"
+  approved: true
+  post: cr
+
+sam:
+  author: one
+  author_url: user_path(users(:one))
+  author_email: users(:one)
+  user_ip: users(:users).current_sign_in_ip
+  user_agent: "MyString"
+  referrer: "MyString"
+  content: "Go back to journalism school!"
+  approved: true
+  post: http
+
+morgan:
+  author: one
+  author_url: user_path(users(:one))
+  author_email: users(:one)
+  user_ip: users(:users).current_sign_in_ip
+  user_agent: "MyString"
+  referrer: "MyString"
+  content: "I found this entertaining."
+  approved: true
+  post: cf
+
+sue:
+  author: one
+  author_url: user_path(users(:one))
+  author_email: users(:one)
+  user_ip: users(:users).current_sign_in_ip
+  user_agent: "MyString"
+  referrer: "MyString"
+  content: "I found this entertaining."
+  approved: true
+  post: wd
