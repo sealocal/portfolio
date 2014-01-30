@@ -5,7 +5,7 @@ so that my session is secure.") do
   scenario "Sign Out Sucessfully" do
     #Given a signed up and signed in user,
     visit new_user_session_path
-    fill_in "Email", with: users(:one).email
+    fill_in "Email", with: users(:pat).email
     fill_in "Password", with: "password"
     click_on "Sign in"
     page.text.must_include "Sign Out"

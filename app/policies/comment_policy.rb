@@ -11,6 +11,14 @@ class CommentPolicy < ApplicationPolicy
   end
 
   def approve?
-    @user.author? || @user.editor?
+    if @user.nil?
+      false
+    else
+      @user.author? || @user.editor?
+    end
+  end
+
+  def destroy?
+    approve?
   end
 end

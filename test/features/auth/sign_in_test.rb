@@ -8,7 +8,7 @@ feature("As a visitor, I want to sign in to my account
     visit root_path
     click_on "Sign In"
     #When I register with valid info
-    fill_in "Email", with: users(:one).email
+    fill_in "Email", with: users(:pat).email
     fill_in "Password", with: "password"
     click_on "Sign in"
     #Then I should be signed in

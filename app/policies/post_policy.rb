@@ -6,6 +6,14 @@ class PostPolicy < ApplicationPolicy
     @post = post
   end
 
+  def index?
+    if @user.nil?
+      false
+    else
+      @user.editor? || @user.admin?
+    end
+  end
+
   def resolve
     scope
   end

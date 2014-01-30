@@ -13,4 +13,9 @@ class User < ActiveRecord::Base
   def editor?
     role == "editor"
   end
+
+
+  def admin?
+    role == "admin"
+  end
 end

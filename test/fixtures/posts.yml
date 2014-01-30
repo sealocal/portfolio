@@ -1,19 +1,19 @@
 cr:
   title: Code Rails
   body: This is how I learned web development!
-  author: one
+  author: pat
   published: true
 
 http:
   title: Intro to HTTP
   body: It's all about the request-response cycle!
-  author: one
+  author: pat
   published: true
 
 cf:
   title: Becoming a Code Fellow
   body: Means striving for excellence.
-  author: one
+  author: pat
   published: true
 
 wd:
@@ -27,4 +27,3 @@ unpub:
   body: I have bad content.
   author: author
   published: false
-

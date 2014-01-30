@@ -13,7 +13,7 @@
 
   <tbody>
     <% @posts.each do |post| %>
-      <% if post.published? %>
+      <% if post.published? || policy(post).index? %>
         <tr id="<%= dom_id(post) %>">
           <td><%= post.title %></td>
           <td><%= post.body %></td>
