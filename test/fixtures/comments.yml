@@ -1,21 +1,21 @@
 # Read about fixtures at
 # http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-pat:
-  author: one
-  author_url: user_path(users(:one))
-  author_email: users(:one)
+pats_comment:
+  author: pat
+  author_url: user_path(users(:pat))
+  author_email: users(:pat)
   user_ip: users(:users).current_sign_in_ip
   user_agent: "MyString"
   referrer: "MyString"
-  content: "Nice post, man!"
+  content: "Nice post, you!"
   approved: true
   post: cr
 
-sam:
-  author: one
-  author_url: user_path(users(:one))
-  author_email: users(:one)
+sams_comment:
+  author: sam
+  author_url: user_path(users(:sam))
+  author_email: users(:sam)
   user_ip: users(:users).current_sign_in_ip
   user_agent: "MyString"
   referrer: "MyString"
@@ -23,10 +23,10 @@ sam:
   approved: true
   post: http
 
-morgan:
-  author: one
-  author_url: user_path(users(:one))
-  author_email: users(:one)
+morgans_comment:
+  author: morgan
+  author_url: user_path(users(:morgan))
+  author_email: users(:morgan)
   user_ip: users(:users).current_sign_in_ip
   user_agent: "MyString"
   referrer: "MyString"
@@ -34,13 +34,13 @@ morgan:
   approved: true
   post: cf
 
-sue:
-  author: one
-  author_url: user_path(users(:one))
-  author_email: users(:one)
+sues_comment:
+  author: sue
+  author_url: user_path(users(:sue))
+  author_email: users(:sue)
   user_ip: users(:users).current_sign_in_ip
   user_agent: "MyString"
   referrer: "MyString"
-  content: "I found this entertaining."
-  approved: true
+  content: "Hi, how I send you money may that you have inherit from King of Nigeria? Kindly Respond."
+  approved: false
   post: wd

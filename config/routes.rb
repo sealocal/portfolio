@@ -1,17 +1,16 @@
 Portfolio::Application.routes.draw do
-  resources :comments
-
   devise_for :users
-  resources :posts
-
-
-  get '/about' => 'welcome#about'
   resources :projects
+
+  resources :posts do
+    resources :comments
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+  get '/about' => 'welcome#about'
   root 'welcome#index'
 
 
