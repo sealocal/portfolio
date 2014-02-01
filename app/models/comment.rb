@@ -2,7 +2,7 @@ class Comment < ActiveRecord::Base
   belongs_to :post
 
   def approve!
-    approve = true
+    approved = true
     save!
   end
 

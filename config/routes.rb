@@ -1,5 +1,5 @@
 Portfolio::Application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
   resources :projects
 
   resources :posts do
@@ -10,7 +10,7 @@ Portfolio::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  get '/about' => 'welcome#about'
+  get '/contact' => 'welcome#contact'
   root 'welcome#index'
 
 

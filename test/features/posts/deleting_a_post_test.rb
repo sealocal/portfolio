@@ -28,6 +28,11 @@ feature "Deleting a Post" do
     visit posts_path
     #Then I should not see the "Destroy" link
     page.wont_have_link "Destroy"
+    page.driver.submit :delete, "/posts/#{posts(:cr).id}", {}
+    #When I visit the posts index page
+    visit posts_path
+    #Then the post will not be displayed
+    page.text.must_include posts(:cr).body
   end
 
   scenario "As an editor I want to delete posts so that I can remove opium-fueled Jabberwocky" do

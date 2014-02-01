@@ -1,0 +1,22 @@
+<table>
+  <tbody>
+    <% @comments.each do |comment| %>
+      <tr id="<%= dom_id(comment) %>">
+        <td><%= comment.content %></td>
+        <% if policy(comment).update? %>
+          <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
+        <% end %>
+        <% if policy(comment).destroy? %>
+          <td><%= link_to 'Destroy', post_comment_path(@post, comment),
+                  method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+        <td>
+          <%= render partial: "comments/approve", locals: {comment: comment} %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+

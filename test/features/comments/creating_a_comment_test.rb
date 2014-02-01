@@ -15,9 +15,8 @@ feature "Creating a Comment" do
     sign_in(:author)
     #When I visit a post path
     visit post_path(posts(:wd))
-    #Then I will see an approval checkbox
-    page.must_have_text "Approved"
-    check "Approved"
+    #Then I will see an Approve button
+    click_on "Approve"
   end
 
   scenario "As an editor I want to approve comments so that my blog does not have spam comments" do
@@ -26,8 +25,7 @@ feature "Creating a Comment" do
     #When I visit a post path
     visit post_path(posts(:wd))
     #Then I will see an approval checkbox
-    page.must_have_text "Approved"
-    check "Approved"
+    click_on "Approve"
   end
 
 end

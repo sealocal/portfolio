@@ -1,10 +1,9 @@
 class CommentsController < ApplicationController
 
   def create
-    @comment = Comment.new(comment_params)
     @post = Post.find(params[:post_id])
+    @comment = @post.comments.build(comment_params)
     if @comment.save
-      @post.comments << @comment
       redirect_to @post, notice: 'Comment was successfully created.'
     else
       redirect_to @post, notice: 'Comment was not saved successfully.'
@@ -12,7 +11,24 @@ class CommentsController < ApplicationController
   end
 
   def update
-    @post = Post.find(params)
+    @post = Post.find(params[:post_id])
+    @comment = Comment.find(params[:id])
+    @comment.approve!
+    if @comment.update(comment_params)
+      redirect_to @post, notice: 'Comment was successfully approved.'
+    else
+      redirect_to @post, notice: 'Comment was NOT approved.'
+    end
+  end
+
+  def destroy
+    set_comment
+    @post = @comment.post
+    if @comment.destroy
+      redirect_to @post, notice: 'Comment annihilated!'
+    else
+      redirect_to @post, notice: 'Comment was not removed!'
+    end
   end
 
   private

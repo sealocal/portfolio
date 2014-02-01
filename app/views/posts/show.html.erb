@@ -19,9 +19,7 @@
 </p>
 
 <%= render 'comments/form' %>
-<%# render partial: "comments/index" %>
-<%= render partial: "comments/index", locals: {comments: @comments} %>
-<%# render partial: "comments/index", collection: @comments %>
+<%= render 'comments/table' %>
 
 <%= link_to 'Edit This Blog Post', edit_post_path(@post) %> <br>
 <%= link_to 'Back To Blog Index page', posts_path %>

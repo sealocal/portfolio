@@ -51,8 +51,8 @@ feature "Creating a Post" do
     # Then there is no checkbox for published
     page.wont_have_field("Published")
     # And I should see a 'not authorized' message if I try to hack it
-    # TODO: I don't know how to submit an HTTP DELETE request!
-    #post '/foo', data: "here"
+    #TODO: ?
+    #page.execute_script(link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' })
   end
 
   scenario "As an editor I want to publish posts so that I can make posts live on the site" do

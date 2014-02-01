@@ -1,8 +1,10 @@
 source 'https://rubygems.org'
 ruby '2.1.0'
 
+gem 'omniauth-twitter'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'devise', '~> 3.2.2'
+gem 'figaro'
 gem 'foundation-rails', '~> 5.0.3'
 gem 'jbuilder', '~> 1.2'
 gem 'jquery-rails'
@@ -17,6 +19,7 @@ group :development do
   gem 'better_errors', '~> 1.1.0'
   gem 'binding_of_caller', '~> 0.7.2'
   gem 'debugger'
+  gem 'pry'
   gem 'sqlite3'
 end
 
@@ -30,8 +33,10 @@ group :production do
 end
 
 group :test do
+  gem 'binding_of_caller', '~> 0.7.2'
   gem 'minitest-rails-capybara'
   gem 'launchy'
+  gem 'pry'
   gem 'simplecov', require: false
   gem 'turn'
 end

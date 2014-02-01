@@ -7,7 +7,7 @@ feature "Visiting the Post Index" do
     visit posts_path
     #Then the exisiting posts should be loaded
     page.text.must_include posts(:cf).title
-    page.text posts(:cf).body
+    page.text.must_include posts(:cf).body
   end
 
   scenario "As a site visitor I want to only see published posts so that I don't see crap drafts" do
@@ -29,10 +29,10 @@ feature "Visiting the Post Index" do
     sign_in(:editor)
     #WWhen I visit the posts index
     visit posts_path
-    #Then I should see all posts, regardless of publish flag
+    #Then I should see all posts, regardless of published flag
     Post.where(published: false).each do |post|
-      page.text.wont_include post.title
-      page.text.wont_include post.body
+      page.text.must_include post.title
+      page.text.must_include post.body
     end
   end
 

@@ -1,19 +1,11 @@
-<%= form_for(@post, comment) do |f| %>
-  <!--  This my approve check box. -->
-    <% if policy(comment).approve? %>
-    <%# if CommentPolicy.new(current_user, comment).approve? %>
-      <div class="row collapse">
-        <div class="small-3 columns">
-          <%= f.label :approved, class: "right inline", title: "Is this comment approved?",
-              data: {tooltip: true } %>
-        </div>
-        <div class="small-9 columns">
-          <%= f.check_box :approved %>
-        </div>
-        <div class="actions">
-          <%= f.submit %>
-        </div>
-      </div>
-    <% end %>
-  <!--#############################-->
+<%= form_for([@post, comment]) do |f| %>
+  <% if policy(comment).approve? && !comment.approved? %>
+    <%# TODO: modify form to have a submit that changes approved boolean to ture %>
+    <%# f.label :approved, class: "right inline", title: "Is this comment approved?", data: {tooltip: true } %>
+    <%# f.check_box :approved, class: "right inline", title: "Is this comment approved?",
+            data: {tooltip: true } %>
+    <%# THIS IS AWESOME %>
+    <%= f.hidden_field :approved, value: true %>
+    <%= f.submit "Approve" %>
+  <% end %>
 <% end %>
