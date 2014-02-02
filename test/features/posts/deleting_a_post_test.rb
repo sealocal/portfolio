@@ -29,6 +29,8 @@ feature "Deleting a Post" do
     #Then I should not see the "Destroy" link
     page.wont_have_link "Destroy"
     page.driver.submit :delete, "/posts/#{posts(:cr).id}", {}
+    #Then I will receive an error message
+    page.text.must_include "You are not authorized for that action!"
     #When I visit the posts index page
     visit posts_path
     #Then the post will not be displayed

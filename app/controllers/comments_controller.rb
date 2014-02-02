@@ -1,8 +1,11 @@
 class CommentsController < ApplicationController
 
+  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
+
   def create
     @post = Post.find(params[:post_id])
     @comment = @post.comments.build(comment_params)
+    authorize @comment
     if @comment.save
       redirect_to @post, notice: 'Comment was successfully created.'
     else
@@ -40,5 +43,10 @@ class CommentsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def comment_params
       params.require(:comment).permit(:content, (:approved if CommentPolicy.new(current_user, @comment).approve?))
+    end
+
+    def user_not_authorized
+      flash[:error] = "You must log in with Twitter to comment!"
+      redirect_to request.headers["Referer"] || root_path
     end
 end

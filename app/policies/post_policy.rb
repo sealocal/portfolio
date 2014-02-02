@@ -10,7 +10,7 @@ class PostPolicy < ApplicationPolicy
     if @user.nil?
       false
     else
-      @user.editor? || @user.admin?
+      @user.author? || @user.editor? || @user.admin?
     end
   end
 

@@ -2,6 +2,8 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
 
+  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
+
   # GET /posts
   # GET /posts.json
   def index
@@ -28,14 +30,11 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params)
-
-    respond_to do |format|
-      if @post.save!
-        current_user.posts << @post
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
-      else
-        format.html { render action: 'new' }
-      end
+    if @post.save!
+      current_user.posts << @post
+      redirect_to @post, notice: 'Post was successfully created.'
+    else
+      render action: 'new'
     end
   end
 
@@ -52,10 +51,9 @@ class PostsController < ApplicationController
   # DELETE /posts/1
   # DELETE /posts/1.json
   def destroy
+    authorize @post
     @post.destroy
-    respond_to do |format|
-      format.html { redirect_to posts_url }
-    end
+    redirect_to posts_url
   end
 
   private
@@ -67,5 +65,10 @@ class PostsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
       params.require(:post).permit(:title, :body, (:published if PostPolicy.new(current_user, @post).publish?))
+    end
+
+    def user_not_authorized
+      flash[:error] = "You are not authorized for that action!"
+      redirect_to request.headers["Referer"] || root_path
     end
 end
