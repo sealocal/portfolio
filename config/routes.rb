@@ -11,7 +11,7 @@ Portfolio::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   get '/contact' => 'welcome#contact'
-  root 'welcome#index'
+  root 'pages#home'
 
 
   # Example of regular route:
