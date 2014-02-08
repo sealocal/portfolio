@@ -1,4 +1,4 @@
-class WelcomeController < ApplicationController
+class PagesController < ApplicationController
   def home
   end
 
