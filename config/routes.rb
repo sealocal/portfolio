@@ -6,13 +6,16 @@ Portfolio::Application.routes.draw do
     resources :comments
   end
 
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
-  get '/contact' => 'welcome#contact'
+  #static pages routes
+  get '/about' => 'pages#about'
+  get '/contact' => 'pages#contact'
+  get '/portfolio' => 'pages#portfolio'
+  get '/services' => 'pages#services'
   root 'pages#home'
 
+
+# The priority is based upon order of creation: first created -> highest priority.
+  # See how all your routes lay out with "rake routes".
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
