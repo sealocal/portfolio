@@ -1,91 +1,43 @@
-        <!-- after_header -->
-        <section class="after_header text-center sections">
-            <div class="row">
-                <div class="medium-10 small-centered columns">
+<!-- after_header -->
+<section class="after_header text-center sections">
+    <div class="row">
+        <div class="medium-10 small-centered columns">
 
-                            <h2>Contact with Us.</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, voluptatibus, consectetur, consequatur quod dolorum numquam impedit ut earum provident magnam magni atque possimus reprehenderit tempora in eum ullam delectus quisquam?</p>
+            <h2>Contact Me</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, voluptatibus, consectetur, consequatur quod dolorum numquam impedit ut earum provident magnam magni atque possimus reprehenderit tempora in eum ullam delectus quisquam?</p>
 
-                </div><!-- /.medium-10 .small-centered .columns -->
-            </div><!-- /.row -->
-        </section>
-        <!-- / after_header -->
+        </div><!-- /.medium-10 .small-centered .columns -->
+    </div><!-- /.row -->
+</section>
+<!-- / after_header -->
 
+<!--  Main -->
+<section class="main_box sections">
 
-        <!-- divider -->
-        <section class="divider"> </section>
-        <!-- / divider -->
+    <div class="row"><!-- row -->
+        <div class="large-6 l column">
 
+            <form  id="contact" data-abide>
+              <div class="name-field">
+                <label>Your name <small>required</small></label>
+                <input type="text" required pattern="[a-zA-Z]+">
+                <small class="error">Name is required and must be a string.</small>
+              </div>
+              <div class="email-field">
+                <label>Email <small>required</small></label>
+                <input type="email" required>
+                <small class="error">An email address is required.</small>
+              </div>
 
-        <!--  Main -->
-        <section class="main_box sections">
-            <!-- row -->
-            <div class="row">
-                    <div class="large-6 l column">
-                            <form  id="contact" data-abide>
-                              <div class="name-field">
-                                <label>Your name <small>required</small></label>
-                                <input type="text" required pattern="[a-zA-Z]+">
-                                <small class="error">Name is required and must be a string.</small>
-                              </div>
-                              <div class="email-field">
-                                <label>Email <small>required</small></label>
-                                <input type="email" required>
-                                <small class="error">An email address is required.</small>
-                              </div>
+                <label>Menssage</label>
+                <textarea  class="textarea" placeholder="Write a menssage ..."  ></textarea>
+                <button class="tiny" type="submit">Submit</button>
+            </form>
 
-                                <label>Menssage</label>
-                                <textarea  class="textarea" placeholder="Write a menssage ..."  ></textarea>
-                                <button class="tiny" type="submit">Submit</button>
-                            </form>
-
-                    </div>
-                    <div class="large-6 column">
-
-                            <!-- WINDOW -->
-                            <div class="window" title="Text hover Image sample">
-                                <div class="window-search">Find Us in the maps</div>
-                                <div class="window-buttons"></div>
-                                <div class="window-body">
-
-                                    <div class="widget">
-                                             <iframe width="650" height="100"  src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=&amp;aq=0&amp;oq=pittsburgh&amp;sll=40.440625,-79.995886&amp;sspn=0.166706,0.363579&amp;ie=UTF8&amp;ll=40.697488,-73.979681&amp;spn=0.664273,1.454315&amp;t=m&amp;z=10&amp;output=embed"></iframe>
-                                    </div>
-
-                                </div>
-                            </div><!-- / WINDOW -->
-
-                    </div>
-            </div><!-- /.row -->
-
-        </section>
-        <!-- / main_box -->
+        </div>
+    </div><!-- /.row -->
+</section>
+<!-- / main_box -->
 
 
-        <!-- Prefooter -->
-        <section class="prefooter">
-            <div class="row">
-                <div class="medium-8 small-centered columns">
-
-                    <h3>Subscribe Now  on  My  Newsletter</h3>
-
-                </div><!-- /.medium-8 .small-centered .columns -->
-
-                <div class="medium-6 small-centered columns">
-                    <div class="row collapse">
-
-                        <div class="medium-8 columns">
-                            <input type="email" placeholder="Enter your email">
-                        </div><!-- /.medium-8 .columns -->
-
-                        <div class="medium-4 columns">
-                            <a href="#" class="button">Subscribe</a>
-                        </div><!-- /.medium-4 .columns -->
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, magnam, quo, nesciunt temporibus quae.</p>
-
-                    </div><!-- /.row .collapse -->
-                </div><!-- /.medium-6 .small-centered .columns -->
-            </div>
-        </section>
-        <!-- / Prefooter -->
+<%= render 'prefooter' %>
