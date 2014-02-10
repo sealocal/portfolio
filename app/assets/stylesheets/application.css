@@ -395,12 +395,10 @@ blockquote:hover {
 }
 
 
-
-
 /* #Themes Styles
 ------------------------------------------- */
 .masthead {
-  background: url("header.jpg") no-repeat center center fixed;
+  background: url("mountain_left.jpg") no-repeat center center fixed;
   padding-bottom: 1em;
   background-size: cover;
   position: relative;
