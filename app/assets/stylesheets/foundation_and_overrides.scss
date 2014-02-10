@@ -8,7 +8,6 @@
 // Allows the use of rem-calc() or lower-bound() in your settings
 @import "foundation/functions";
 
-
 // $experimental: true;
 
 // The default font-size is set to 100% of the browser style sheet (usually 16px)
@@ -1189,4 +1188,4 @@
 
 // $include-html-visibility-classes: $include-html-classes;
 
-@import "foundation";
+@import 'foundation';
