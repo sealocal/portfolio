@@ -2,10 +2,8 @@
 <section class="after_header text-center sections">
     <div class="row">
         <div class="medium-10 small-centered columns">
-
             <h2>Contact Me</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, voluptatibus, consectetur, consequatur quod dolorum numquam impedit ut earum provident magnam magni atque possimus reprehenderit tempora in eum ullam delectus quisquam?</p>
-
         </div><!-- /.medium-10 .small-centered .columns -->
     </div><!-- /.row -->
 </section>
@@ -13,31 +11,29 @@
 
 <!--  Main -->
 <section class="main_box sections">
-
     <div class="row"><!-- row -->
         <div class="large-6 l column">
-
             <form  id="contact" data-abide>
-              <div class="name-field">
-                <label>Your name <small>required</small></label>
-                <input type="text" required pattern="[a-zA-Z]+">
-                <small class="error">Name is required and must be a string.</small>
-              </div>
-              <div class="email-field">
-                <label>Email <small>required</small></label>
-                <input type="email" required>
-                <small class="error">An email address is required.</small>
-              </div>
-
-                <label>Menssage</label>
-                <textarea  class="textarea" placeholder="Write a menssage ..."  ></textarea>
+                <div class="name-field">
+                    <label>Your name <small>required</small></label>
+                    <input type="text" required pattern="[a-zA-Z]+">
+                    <small class="error">Name is required and must be a string.</small>
+                </div>
+                <div class="email-field">
+                    <label>Email <small>required</small></label>
+                    <input type="email" required>
+                    <small class="error">An email address is required.</small>
+                </div>
+                <div="message-field">
+                    <label>Message</label>
+                    <textarea  class="textarea" placeholder="How can I help you?"  ></textarea>
+                <br />
                 <button class="tiny" type="submit">Submit</button>
+                </div>
             </form>
-
         </div>
     </div><!-- /.row -->
 </section>
 <!-- / main_box -->
 
-
-<%= render 'prefooter' %>
+<%= render 'layouts/prefooter' %>
