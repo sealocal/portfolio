@@ -10,7 +10,7 @@
     <title><%= content_for?(:title) ? yield(:title) : "Mike Taylor : Ruby on Rails Dev" %></title>
     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-
+    <%= javascript_include_tag "vendor/custom.modernizr" %>
     <%= csrf_meta_tags %>
 
     <meta name="description" content="This is my personal homepage.  I am a Ruby on Rails web developer and a bootcamper in the Code Fellows' Ruby on Rails bootcamp.">
@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Raleway:400,700|Rock+Salt">
 
     <!-- Favicons -->
-    <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="#" type="image/x-icon">
     <!-- For third-generation iPad with high-resolution Retina display: -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/favicon/apple-touch-icon-144x144-precomposed.png">
     <!-- For iPhone with high-resolution Retina display: -->
@@ -48,7 +48,7 @@
     <![endif]-->
 
     <!-- Modernizr Scripts -->
-    <!-- <script src="js/modernizr.js"></script> -->
+
   </head>
   <body>
     <% flash.each do |key, value| %>
@@ -86,7 +86,7 @@
                 <li><i class="icon_divider  fi-asterisk size-12"></i></li>
                 <li><%= link_to "Posts", posts_path %></li>
                 <li><i class="icon_divider  fi-asterisk size-12"></i></li>
-                <li><%= link_to "Contact", contact_path %></li>
+                <li><%= link_to "About", about_path %></li>
                 <li><i class="icon_divider  fi-asterisk size-12"></i></li>
                 <% if current_user %>
                   <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
@@ -103,18 +103,17 @@
 
       <!-- Info -->
       <section class="info">
-          <h1 class="info_text">MINIMAL</h1>
-          <h2 class="info_text">DESIGN</h2>
+        <h1 class="info_text">MINIMAL</h1>
+        <h1 class="info_text">DESIGN</h2>
       </section><!-- / .Info -->
 
-        <!-- .share icons -->
+      <!-- .share icons -->
       <section class="share_icons">
-          <ul>
-              <li><a href="#"><i class="fi-social-facebook size-36"></i></a></li>
-              <li><a href="#"><i class="fi-social-twitter size-36"></i></a></li>
-              <li><a href="#"><i class="fi-social-youtube size-36"></i></a></li>
-              <li><a href="#"><i class="fi-social-instagram size-36"></i></a></li>
-          </ul>
+        <ul>
+          <li><a href="#"><i class="fi-social-facebook size-36"></i></a></li>
+          <li><a href="#"><i class="fi-social-twitter size-36"></i></a></li>
+          <li><a href="#"><i class="fi-social-linkedin size-36"></i></a></li>
+        </ul>
       </section><!-- / .share icons -->
     </header><!-- /.masthead -->
     <%= yield %>
