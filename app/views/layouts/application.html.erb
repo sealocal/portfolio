@@ -75,12 +75,16 @@
         </section><!-- /.top-bar-section -->
       </nav> <!-- /.top-bar -->
 
-
       <!-- Info -->
       <section class="info">
-        <h1 class="info_text">MINIMAL</h1>
-        <h1 class="info_text">DESIGN</h2>
+        <h1 class="info_text">
+          <%= yield(:info_text_line_1) %>
+        </h1>
+        <h1 class="info_text">
+          <%= yield(:info_text_line_2) %>
+        </h2>
       </section><!-- / .Info -->
+
     </header><!-- /.masthead -->
     <%= yield %>
     <%= render 'layouts/footer' %>
