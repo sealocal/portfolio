@@ -32,7 +32,10 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     if @post.save!
       current_user.posts << @post
-      redirect_to @post, notice: 'Post was successfully created.'
+      respond_to do |format|
+        format.html { redirect_to @post, notice: 'Post was successfully created.' }
+        format.js
+      end
     else
       render action: 'new'
     end
@@ -53,7 +56,10 @@ class PostsController < ApplicationController
   def destroy
     authorize @post
     @post.destroy
-    redirect_to posts_url
+    respond_to do |format|
+      format.html { redirect_to posts_url }
+      format.js
+    end
   end
 
   private
