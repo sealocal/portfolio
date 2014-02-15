@@ -1,6 +1,7 @@
-<tr id="<%= dom_id(post) %>">
+<tr id="<%= dom_id(post) %>" class="post">
   <td><%= post.title %></td>
   <td><%= post.body %></td>
+  <td><%= l post.created_at, format: :short %></td>
   <td><%= link_to 'Show', post %></td>
   <td>
     <% if current_user && policy(post).update? %>

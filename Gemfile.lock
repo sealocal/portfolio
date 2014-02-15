@@ -36,6 +36,9 @@ GEM
       erubis (>= 2.6.6)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    browser-timezone-rails (0.0.7)
+      jquery-rails
+      rails (>= 3.1)
     builder (3.1.4)
     capybara (2.1.0)
       mime-types (>= 1.16)
@@ -207,6 +210,7 @@ DEPENDENCIES
   awesome_print
   better_errors (~> 1.1.0)
   binding_of_caller (~> 0.7.2)
+  browser-timezone-rails
   coffee-rails (~> 4.0.0)
   debugger
   devise (~> 3.2.2)
