@@ -22,9 +22,4 @@ coverage
 /config/application.yml
 
 #Ignore these images:
-/app/assets/images/mountain.jpg
-/app/assets/images/mountain_left.jpg
-/app/assets/images/mountain_left.png
-/app/assets/images/snoqualmie.png
-/app/assets/images/snoqualmie_edit.jpg
-/app/assets/images/thumb.png
+/app/assets/images/*
