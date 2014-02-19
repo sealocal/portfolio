@@ -6,8 +6,7 @@ feature "WelcomePage" do
     #When the home page is visited
     visit root_path
     #Then the welcome message should be displayed
-    page.must_have_content "Minimal Design"
-    page.must_have_content "Lorem ipsum"
+    page.must_have_content "Mike Taylor"
     page.wont_have_content "Leave me alone!"
   end
 end
