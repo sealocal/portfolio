@@ -3,6 +3,7 @@ ruby '2.1.0'
 
 gem 'browser-timezone-rails'
 gem 'coffee-rails', '~> 4.0.0'
+gem 'carrierwave'
 gem 'devise', '~> 3.2.2'
 gem 'figaro'
 gem 'foundation-rails', '~> 5.0.3'
