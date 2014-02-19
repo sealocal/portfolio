@@ -10,7 +10,8 @@ pats_comment:
   referrer: "MyString"
   content: "Nice post, you!"
   approved: true
-  post: cr
+  commentable: wd
+  commentable_type: post
 
 sams_comment:
   author: sam
@@ -21,7 +22,8 @@ sams_comment:
   referrer: "MyString"
   content: "Go back to journalism school!"
   approved: true
-  post: http
+  commentable: portfolio
+  commentable_type: project
 
 morgans_comment:
   author: morgan
@@ -32,7 +34,8 @@ morgans_comment:
   referrer: "MyString"
   content: "I found this entertaining."
   approved: true
-  post: cf
+  commentable: portfolio
+  commentable_type: project
 
 sues_comment:
   author: sue
@@ -43,4 +46,5 @@ sues_comment:
   referrer: "MyString"
   content: "Hi, how I send you money may that you have inherit from King of Nigeria? Kindly Respond."
   approved: false
-  post: wd
+  commentable: portfolio
+  commentable_type: project

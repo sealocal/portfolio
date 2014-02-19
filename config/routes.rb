@@ -1,6 +1,9 @@
 Portfolio::Application.routes.draw do
   devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
-  resources :projects
+
+  resources :projects do
+    resources :comments
+  end
 
   resources :posts do
     resources :comments
@@ -11,8 +14,9 @@ Portfolio::Application.routes.draw do
   get '/contact' => 'pages#contact'
   get '/scratch_space' => 'pages#scratch_space'
 
-  scope ":locale" do
-  end
+  #remove :locale
+  # scope ":locale" do
+  # end
 
   root 'pages#home'
 

@@ -21,6 +21,11 @@ sue:
   email: user4@example.com
   encrypted_password: <%= User.new.send(:password_digest, 'password') %>
 
+twitter_user:
+  email: user5@example.com
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
+  role: twitter_user
+
 author:
   email: author@example.com
   encrypted_password: <%= User.new.send(:password_digest, 'password') %>
@@ -35,4 +40,3 @@ admin:
   email: admin@example.com
   encrypted_password: <%= User.new.send(:password_digest, 'password') %>
   role: admin
-

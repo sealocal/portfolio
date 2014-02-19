@@ -13,7 +13,7 @@
         </td>
         <td>
           <% if policy(comment).destroy? %>
-            <%= link_to 'Destroy', post_comment_path(@post, comment),
+            <%= link_to 'Destroy', [@commentable, comment],
                 method: :delete, data: { confirm: 'Are you sure?' } %>
           <% end %>
         </td>

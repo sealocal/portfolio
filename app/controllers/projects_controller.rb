@@ -5,6 +5,12 @@ class ProjectsController < ApplicationController
     @projects = Project.all
   end
 
+  def show
+    @comment = Comment.new
+    @commentable = @project
+    @comments = @commentable.comments
+  end
+
   def new
     @project = Project.new
   end
@@ -20,9 +26,6 @@ class ProjectsController < ApplicationController
       flash[:alert] = "Technologies used can't be blank."
       render :new
     end
-  end
-
-  def show
   end
 
   def edit

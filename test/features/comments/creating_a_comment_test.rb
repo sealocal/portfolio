@@ -18,6 +18,7 @@ feature "Creating a Comment" do
     sign_in(:author)
     #When I visit a post path
     visit post_path(posts(:wd))
+    save_and_open_page
     #Then I will see an Approve button
     click_on "Approve"
   end
@@ -29,6 +30,16 @@ feature "Creating a Comment" do
     visit post_path(posts(:wd))
     #Then I will see an approval checkbox
     click_on "Approve"
+  end
+
+  scenario "As an owner I want to visitors to comment on projects" do
+    #Given a twitter_user role
+    sign_in(:twitter_user)
+    #When I visit a project path
+    visit project_path(projects(:portfolio))
+    #Then I can submit a comment
+    fill_in "Comment", with: comments(:sams_comment)
+    click_on "Create Comment"
   end
 
 end

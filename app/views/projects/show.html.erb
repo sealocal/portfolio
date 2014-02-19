@@ -2,10 +2,21 @@
     <%= @project.name %>
 <% end %>
 
-<h3><%= @project.name %></h3>
-<p>Technologies used: <%= @project.technologies_used %></p>
+<p id="name">
+  <strong>Name:</strong> <%= @project.name %>
+</p>
+
+<p id="technologies_used"
+  <strong>Technologies used:</strong> <%= @project.technologies_used %>
+</p>
+
 <div class="nav">
   <%= link_to 'Projects', projects_path %> |
   <%= link_to 'Edit', edit_project_path(@project) %> |
   <%= link_to 'Destroy', @project, method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>
+
+<%= render 'comments/form' %>
+<%= render 'comments/table' %>
+
+<%= link_to 'Back to Projects Page', projects_path %>

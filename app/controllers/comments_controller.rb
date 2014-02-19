@@ -1,36 +1,35 @@
 class CommentsController < ApplicationController
+  before_action :load_commentable, only: [:create, :update]
 
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
   def create
-    @post = Post.find(params[:post_id])
-    @comment = @post.comments.build(comment_params)
+    @comment = @commentable.comments.build(comment_params)
     authorize @comment
     if @comment.save
-      redirect_to @post, notice: 'Comment was successfully created.'
+      redirect_to @commentable, notice: 'Comment was successfully created.'
     else
-      redirect_to @post, notice: 'Comment was not saved successfully.'
+      redirect_to @commentable, notice: 'Comment was not saved successfully.'
     end
   end
 
   def update
-    @post = Post.find(params[:post_id])
     @comment = Comment.find(params[:id])
     @comment.approve!
     if @comment.update(comment_params)
-      redirect_to @post, notice: 'Comment was successfully approved.'
+      redirect_to @commentable, notice: 'Comment was successfully approved.'
     else
-      redirect_to @post, notice: 'Comment was NOT approved.'
+      redirect_to @commentable, notice: 'Comment was NOT approved.'
     end
   end
 
   def destroy
     set_comment
-    @post = @comment.post
+    @commentable = @comment.commentable
     if @comment.destroy
-      redirect_to @post, notice: 'Comment annihilated!'
+      redirect_to @commentable, notice: 'Comment annihilated!'
     else
-      redirect_to @post, notice: 'Comment was not removed!'
+      redirect_to @commentable, notice: 'Comment was not removed!'
     end
   end
 
@@ -38,6 +37,11 @@ class CommentsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_comment
       @comment = Comment.find(params[:id])
+    end
+
+    def load_commentable
+      resource, id = request.path.split('/')[1, 2]                        #posts/1/
+      @commentable = resource.singularize.classify.constantize.find(id)   #P.find(1)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
