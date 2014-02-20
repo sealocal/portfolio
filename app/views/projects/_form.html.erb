@@ -1,6 +1,7 @@
+<%= form_for @project, html: { multipart: true } do |f| %>
 
 
-<%= direct_upload_form_for @uploader |f| %>
   <div class="field"><%= f.file_field :image %></div>
   <div class="actions"><%= f.submit "Upload Image" %></div>
+
 <% end %>
