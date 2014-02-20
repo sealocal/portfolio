@@ -14,7 +14,7 @@ class ProjectsController < ApplicationController
   end
 
   def new
-    @project = Project.new(key: params[:key])
+    @project = Project.new #(key: params[:key])
   end
 
   def create
