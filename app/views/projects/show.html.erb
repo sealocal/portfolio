@@ -1,8 +1,8 @@
 <%= content_for (:info_text_line_1) do %>
-    <%= @project.name %>
+  <%= @project.name %>
 <% end %>
 
-<%= image_tag @project.image_url(:thumb).to_s %>
+<%= image_tag @project.image_url(:thumb).to_s if @project.image %>
 
 <p id="name">
   <strong>Name:</strong> <%= @project.name %>

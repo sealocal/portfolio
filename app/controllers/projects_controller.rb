@@ -3,8 +3,8 @@ class ProjectsController < ApplicationController
 
   def index
     @projects = Project.all
-    @uploader = ImageUploader.new
-    @uploader.success_action_redirect = new_project_url
+    # @uploader = ImageUploader.new
+    # @uploader.success_action_redirect = new_project_url
   end
 
   def show
@@ -14,7 +14,7 @@ class ProjectsController < ApplicationController
   end
 
   def new
-    @project = Project.new #(key: params[:key])
+    @project = Project.new
   end
 
   def create
@@ -24,8 +24,7 @@ class ProjectsController < ApplicationController
       redirect_to @project
     else
       flash.now[:error] = "Fix your project, it could not be saved!"
-      flash[:alert] = "Your name isn't really that short!"
-      flash[:alert] = "Technologies used can't be blank."
+      flash[:alert] = "Undefined error message."
       render :new
     end
   end

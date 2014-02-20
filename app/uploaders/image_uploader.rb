@@ -1,14 +1,17 @@
 # encoding: utf-8
 
 class ImageUploader < CarrierWave::Uploader::Base
-  include CarrierWaveDirect::Uploader
+  #WTF WTF WTF #WTF WTF WTF #WTF WTF WTF #WTF WTF WTF #WTF WTF WTF #WTF WTF WTF #WTF WTF WTF #WTF WTF WTF
+  #include CarrierWaveDirect::Uploader
+  #WTF WTF WTF #WTF WTF WTF #WTF WTF WTF #WTF WTF WTF #WTF WTF WTF #WTF WTF WTF #WTF WTF WTF #WTF WTF WTF
+
   # Include RMagick or MiniMagick support:
   include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
   #storage :file
-  storage :fog #carrierwave_direct sets :fog for me
+  storage :fog
 
   include CarrierWave::MimeTypes
   process :set_content_type
