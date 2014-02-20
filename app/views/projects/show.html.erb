@@ -2,6 +2,8 @@
     <%= @project.name %>
 <% end %>
 
+<%= image_tag @project.image_url(:thumb).to_s %>
+
 <p id="name">
   <strong>Name:</strong> <%= @project.name %>
 </p>

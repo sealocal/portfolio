@@ -13,6 +13,8 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
+    @uploader = Project.new.image
+    @uploader.success_action_redirect = new_project_url
   end
 
   def create
@@ -52,6 +54,6 @@ private
   end
 
   def project_params
-    params.require(:project).permit(:name, :technologies_used, :image)
+    params.require(:project).permit(:name, :technologies_used, :image, :remote_image_url)
   end
 end
