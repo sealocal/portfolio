@@ -3,6 +3,8 @@ class ProjectsController < ApplicationController
 
   def index
     @projects = Project.all
+    @uploader = ImageUploader.new
+    @uploader.success_action_redirect = new_project_url
   end
 
   def show
@@ -12,9 +14,7 @@ class ProjectsController < ApplicationController
   end
 
   def new
-    @project = Project.new
-    @uploader = Project.new.image
-    @uploader.success_action_redirect = new_project_url
+    @project = Project.new(key: params[:key])
   end
 
   def create
