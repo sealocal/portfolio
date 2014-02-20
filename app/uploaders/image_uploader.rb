@@ -2,7 +2,7 @@
 
 class ImageUploader < CarrierWave::Uploader::Base
   #WTF WTF WTF #WTF WTF WTF #WTF WTF WTF #WTF WTF WTF #WTF WTF WTF #WTF WTF WTF #WTF WTF WTF #WTF WTF WTF
-  #include CarrierWaveDirect::Uploader
+  include CarrierWaveDirect::Uploader
   #WTF WTF WTF #WTF WTF WTF #WTF WTF WTF #WTF WTF WTF #WTF WTF WTF #WTF WTF WTF #WTF WTF WTF #WTF WTF WTF
 
   # Include RMagick or MiniMagick support:
@@ -11,7 +11,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Choose what kind of storage to use for this uploader:
   #storage :file
-  storage :fog
+  #storage :fog
 
   include CarrierWave::MimeTypes
   process :set_content_type
@@ -25,12 +25,13 @@ class ImageUploader < CarrierWave::Uploader::Base
   # end
 
   def cache_dir
-    "#{Rails.root}/tmp/uploads"
+    "#{Rails.root}/tmp/image_uploader"
   end
 
-  def store_dir
-    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
-  end
+  # def store_dir
+  #   "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+  # end
+
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url
   #   # For Rails 3.1+ asset pipeline compatibility:
@@ -48,7 +49,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   version :thumb do
-    process resize_to_limit: [400, 400]
+    process resize_to_fill: [400, 400]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.
