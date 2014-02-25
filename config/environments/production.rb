@@ -66,7 +66,7 @@ Portfolio::Application.configure do
   config.action_mailer.raise_delivery_errors = true
   # Default mailer url for Devise
   config.action_mailer.default_url_options = { :host => 'mikes-cf-portfolio.herokuapp.com' }
-  ActionMailer SMTP settings
+  #ActionMailer SMTP settings
   config.action_mailer.smtp_settings = {
       address: "smtp.gmail.com",
       port: 587,
