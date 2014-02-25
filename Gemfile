@@ -42,8 +42,9 @@ end
 
 group :test do
   gem 'binding_of_caller', '~> 0.7.2'
-  gem 'minitest-rails-capybara'
+  gem 'email_spec'
   gem 'launchy'
+  gem 'minitest-rails-capybara'
   gem 'pry'
   gem 'simplecov', require: false
   gem 'turn'

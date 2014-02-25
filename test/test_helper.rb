@@ -6,9 +6,13 @@ require File.expand_path("../../config/environment", __FILE__)
 require "rails/test_help"
 require "minitest/rails"
 require "minitest/rails/capybara"
+#require "minitest-matchers"
+require "email_spec"
 
 
 class ActiveSupport::TestCase
+  include EmailSpec::Helpers
+  include EmailSpec::Matchers
   # Setup all fixtures in test/fixtures/*.(yml|csv) for all tests in alphabetical order.
   fixtures :all
 
