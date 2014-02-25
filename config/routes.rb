@@ -9,16 +9,22 @@ Portfolio::Application.routes.draw do
     resources :comments
   end
 
+  #resources :contact, only: [:new, :create], as: :contact
+  match 'contact', via: :get,  to: 'contact#new',     as: 'new_contact'
+  match 'contact', via: :post, to: 'contact#create',  as: 'contact'
+
   #static pages routes
-  get '/about' => 'pages#about'
-  get '/contact' => 'pages#contact'
+  get '/about', to: redirect('/contact/new')
   get '/scratch_space' => 'pages#scratch_space'
+  root 'pages#home'
+
+
+
 
   #remove :locale
   # scope ":locale" do
   # end
 
-  root 'pages#home'
 
 # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

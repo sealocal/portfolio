@@ -63,7 +63,7 @@ Portfolio::Application.configure do
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
-  # config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
   # Default mailer url for Devise
   config.action_mailer.default_url_options = { :host => 'mikes-cf-portfolio.herokuapp.com' }
 

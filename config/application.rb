@@ -24,5 +24,19 @@ module Portfolio
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+    config.action_mailer.smtp_settings = {
+      address: "smtp.gmail.com",
+      port: 587,
+      domain: "gmail.com",
+      user_name: ENV["GMAIL_USER_NAME"],
+      password: ENV["GMAIL_PASSWORD"],
+      authentication: :plain,
+      enable_starttls_auto: true
+    }
+
+    # If e-mails are working, then this is not needed because it is set in the dev/test/prod environments.
+    # config.action_mailer.default_url_options = {
+    #   host: "localhost:3000"
+    # }
   end
 end

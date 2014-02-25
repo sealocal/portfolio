@@ -9,6 +9,8 @@
     <li class="divider"></li>
     <li><%= link_to "About", about_path %></li>
     <li class="divider"></li>
+    <li><%= link_to "Contact", new_contact_path %></li>
+    <li class="divider"></li>
     <% if current_user %>
       <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
       <li class="divider"></li>
