@@ -3,7 +3,7 @@ require "test_helper"
 feature "NotificationsMailer" do
   scenario "As an owner, I want users to be able to send emails to me through a contact form." do
     #Given the conact page
-    visit contact_path
+    visit connect_path
     #When the form is submitted
     fill_in :name, with: "Pat"
     fill_in "Email", with: users(:pat).email

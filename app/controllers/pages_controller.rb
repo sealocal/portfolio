@@ -5,7 +5,4 @@ class PagesController < ApplicationController
   def about
     redirect_to
   end
-
-  def contact
-  end
 end

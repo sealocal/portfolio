@@ -8,6 +8,7 @@ gem 'carrierwave_direct'
 gem 'devise', '~> 3.2.2'
 gem 'figaro'
 gem 'fog'
+gem "font-awesome-sass", "~> 4.0.3"
 gem 'foundation-rails', '~> 5.0.3'
 gem 'jbuilder', '~> 1.2'
 gem 'jquery-rails'

@@ -1,0 +1,90 @@
+<%= content_for (:info_text_line_1) do %>
+  CONNECT
+<% end %>
+
+<% content_for(:heading) do %>
+<% end %>
+
+<% content_for(:content) do %>
+  <div class="large-6 l column">
+    <h1>About Me </h1>
+    <p>
+     I am a Ruby on Rails web developer, with a background in GIS mapping and contstruction management.
+     <br />
+     I hold a BS in Civil Engineering.
+    </p>
+    <p>
+      Send me a message to chat about your web app idea.
+    </p>
+  </div>
+
+  <div class="large-6 l column">
+    <%= form_for @message, url: connect_path, html: {id: "connect"} do |f| %>
+      <div class="name-field">
+        <%= f.label(:name, "Name", class: "left") %>
+        <%= f.text_field :name, html: {class: "name-field", required: true, pattern: "[a-zA-Z]+"} %>
+      </div>
+      <div class="email-field">
+        <%= f.label(:email, "Email", class: "left") %>
+        <%= f.text_field :email, html: {class: "email-field"}, required: true %>
+      </div>
+      <div class="message-field">
+        <%= f.label(:message, "Message", class: "left") %>
+        <%= f.text_area :message, html: {class: "message-field", required: true, placeholder: "How can I help you?"} %>
+        <br />
+        <%= f.submit "Submit", class: "left" %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+
+
+
+<!--  info_box -->
+<section class="info_box sections">
+    <div class="row">
+        <div class="medium-4 columns">
+            <div class="after_header_col">
+                <div class="after_header_icon">
+                  <%= link_to "https://www.linkedin.com/in/miketayloreit" do %>
+                    <h4><i class="fa fa-linkedin-square fa-5x"></i></h4>
+                    <p>Mike Taylor</p>
+                  <% end %>
+                </div><!-- / after_header_icon -->
+            </div><!-- /.after_header_col -->
+        </div><!-- /.medium-4 .columns -->
+
+        <div class="medium-4 columns">
+            <div class="after_header_col">
+                <div class="after_header_icon">
+                  <%= link_to "http://stackoverflow.com/users/3238292/sealocal" do %>
+                    <h4><i class="fa fa-github-square fa-5x"></i></h4>
+                    <p>sealocal</p>
+                  <% end %>
+                </div><!-- / after_header_icon -->
+            </div><!-- /.after_header_col -->
+        </div><!-- /.medium-4 .columns -->
+
+        <div class="medium-4 columns">
+            <div class="after_header_col">
+                <div class="after_header_icon">
+                  <%= link_to "http://stackoverflow.com/users/3238292/sealocal" do %>
+                    <h4><i class="fa fa-twitter-square fa-5x"></i></h4>
+                    <p>@sea_local</p>
+                  <% end %>
+                </div><!-- / after_header_icon -->
+            </div><!-- /.after_header_col -->
+        </div><!-- /.medium-4 .columns -->
+
+    </div><!-- /.row -->
+</section><!-- / .info_box -->
+
+<%= render 'layouts/after_header' %>
+
+<!--  Main -->
+<!-- <section class="main_box sections">
+
+</section> -->
+<!-- / main_box -->
+
+

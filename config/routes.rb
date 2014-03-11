@@ -1,10 +1,10 @@
 Portfolio::Application.routes.draw do
-  #resources :contact, only: [:new, :create], as: :contact
-  match 'contact', via: :get,  to: 'contact#new',     as: 'new_contact'
-  match 'contact', via: :post, to: 'contact#create',  as: 'contact'
+
+  #connect page
+  match 'connect', via: :get,  to: 'connect#new',     as: 'new_connect'
+  match 'connect', via: :post, to: 'connect#create',  as: 'connect'
 
   #static pages routes
-  get '/about', to: redirect('/contact')
   get '/scratch_space' => 'pages#scratch_space'
   root 'pages#home'
 

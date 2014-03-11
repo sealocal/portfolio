@@ -1,4 +1,4 @@
-class ContactController < ApplicationController
+class ConnectController < ApplicationController
   def new
     @message = Message.new
   end
