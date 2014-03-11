@@ -1,32 +1,14 @@
 Portfolio::Application.routes.draw do
-  devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
-
-  resources :projects do
-    resources :comments
-  end
-
-  resources :posts do
-    resources :comments
-  end
-
   #resources :contact, only: [:new, :create], as: :contact
   match 'contact', via: :get,  to: 'contact#new',     as: 'new_contact'
   match 'contact', via: :post, to: 'contact#create',  as: 'contact'
 
   #static pages routes
-  get '/about', to: redirect('/contact/new')
+  get '/about', to: redirect('/contact')
   get '/scratch_space' => 'pages#scratch_space'
   root 'pages#home'
 
-
-
-
-  #remove :locale
-  # scope ":locale" do
-  # end
-
-
-# The priority is based upon order of creation: first created -> highest priority.
+  # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # Example of regular route:
