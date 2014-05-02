@@ -6,6 +6,10 @@ Portfolio::Application.routes.draw do
 
   #static pages routes
   get '/scratch_space' => 'pages#scratch_space'
+
+  get 'pages/about' => 'pages#about'
+  get 'pages/blog' => 'pages#blog'
+  get 'pages/home' => 'pages#home'
   root 'pages#home'
 
   # The priority is based upon order of creation: first created -> highest priority.
