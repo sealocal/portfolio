@@ -3,6 +3,9 @@ class PagesController < ApplicationController
   end
 
   def about
-    redirect_to
+    redirect_to new_connect_path
+  end
+
+  def blog
   end
 end
