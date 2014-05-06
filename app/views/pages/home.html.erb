@@ -2,6 +2,18 @@
     mike taylor
 <% end %>
 
+<!-- masthead -->
+<header class="masthead">
+  <%= render 'layouts/nav_bar' %>
+  <!-- Info -->
+  <section class="info">
+    <h1 class="info_text">
+      <%= yield(:info_text_line) %>
+    </h1>
+  </section>
+  <!-- / .Info -->
+</header>
+<!-- /.masthead -->
 
 <!-- .after_header -->
 <section class="after_header text-center sections">
