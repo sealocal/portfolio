@@ -3,8 +3,6 @@ ruby '2.1.0'
 
 gem 'browser-timezone-rails'
 gem 'coffee-rails', '~> 4.0.0'
-gem 'carrierwave'
-gem 'carrierwave_direct'
 gem 'devise', '~> 3.2.2'
 gem 'figaro'
 gem 'fog'
@@ -27,23 +25,16 @@ gem 'uglifier', '>= 1.3.0'
 group :development do
   gem 'awesome_print'
   gem 'better_errors', '~> 1.1.0'
-  gem 'binding_of_caller', '~> 0.7.2'
   gem 'debugger'
   gem 'pry'
   gem 'sqlite3'
 end
 
-group :doc do
-  gem 'sdoc', require: false
-end
-
-group :production do
-  gem 'pg'
-  gem 'rails_12factor'
+group :development, :test do
+  gem 'binding_of_caller', '~> 0.7.2'
 end
 
 group :test do
-  gem 'binding_of_caller', '~> 0.7.2'
   gem 'email_spec'
   gem 'launchy'
   gem 'minitest-rails-capybara'
@@ -51,3 +42,16 @@ group :test do
   gem 'simplecov', require: false
   gem 'turn'
 end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
+group :doc do
+  gem 'sdoc', require: false
+end
+
+
+
+
