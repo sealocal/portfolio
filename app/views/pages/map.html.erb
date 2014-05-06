@@ -9,4 +9,25 @@
   });
 </script>
 
-<div id="mapDiv" class="claro"></div>
+<!-- masthead -->
+<header class="masthead-map">
+  <%= render 'layouts/nav_bar' %>
+  <!-- Info -->
+  <section class="info">
+    <h1 class="info_text">
+      <%= yield(:info_text_line) %>
+    </h1>
+  </section>
+  <!-- / .Info -->
+</header>
+<!-- /.masthead -->
+
+<% content_for :heading do %>
+  Located in Capitol Hill, Seattle
+<% end %>
+
+<%= render 'layouts/after_header' %>
+
+<section class="claro">
+  <div id="mapDiv"></div>
+</section>
