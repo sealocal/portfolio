@@ -7,6 +7,7 @@ Portfolio::Application.routes.draw do
   #static pages routes
   get '/scratch_space' => 'pages#scratch_space'
 
+  get 'pages/map' => 'pages#map'
   get 'pages/about' => 'pages#about'
   get 'pages/blog' => 'pages#blog'
   get 'pages/home' => 'pages#home'
