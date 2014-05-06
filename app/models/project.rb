@@ -3,7 +3,7 @@ class Project < ActiveRecord::Base
   validates :name, length: { minimum: 2, message: "Really? Your name is less than 2 chars?"}
   has_many :comments, as: :commentable, dependent: :destroy
 
-  mount_uploader :image, ImageUploader
+  # mount_uploader :image, ImageUploader
 
   after_save :enqueue_image
 
