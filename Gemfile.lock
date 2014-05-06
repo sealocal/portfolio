@@ -45,15 +45,6 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    carrierwave (0.10.0)
-      activemodel (>= 3.2.0)
-      activesupport (>= 3.2.0)
-      json (>= 1.7)
-      mime-types (>= 1.16)
-    carrierwave_direct (0.0.14)
-      carrierwave
-      fog
-      uuidtools
     celluloid (0.15.2)
       timers (~> 1.1.0)
     coderay (1.1.0)
@@ -148,7 +139,7 @@ GEM
       minitest-rails (~> 1.0)
     minitest-test (1.1.0)
       minitest (~> 4.0)
-    multi_json (1.9.3)
+    multi_json (1.10.0)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.0)
@@ -211,7 +202,7 @@ GEM
     sdoc (0.4.0)
       json (~> 1.8)
       rdoc (~> 4.0, < 5.0)
-    sidekiq (3.0.0)
+    sidekiq (3.0.2)
       celluloid (>= 0.15.2)
       connection_pool (>= 2.0.0)
       json
@@ -252,7 +243,6 @@ GEM
     uglifier (2.5.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    uuidtools (2.1.4)
     warden (1.2.3)
       rack (>= 1.0)
     xpath (2.0.0)
@@ -266,8 +256,6 @@ DEPENDENCIES
   better_errors (~> 1.1.0)
   binding_of_caller (~> 0.7.2)
   browser-timezone-rails
-  carrierwave
-  carrierwave_direct
   coffee-rails (~> 4.0.0)
   debugger
   devise (~> 3.2.2)
