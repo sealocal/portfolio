@@ -1,0 +1,12 @@
+<script>
+  var map;
+  require(["esri/map", "dojo/domReady!"], function(Map) {
+    map = new Map("mapDiv", {
+      center: [-122.325, 47.613],
+      zoom: 16,
+      basemap: "streets"
+    });
+  });
+</script>
+
+<div id="mapDiv" class="claro"></div>
