@@ -6,6 +6,6 @@ class NotificationsMailer < ActionMailer::Base
 
   def new_message(message)
     @message = message
-    mail(subject: "[miketaylor.io] from #{@email}")
+    mail(subject: "Message from visitor at [miketaylor.io]")
   end
 end
