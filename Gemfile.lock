@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/sealocal/figaro.git
-  revision: d88f9a893f13d5f54846a2afe733895c81cd32d3
-  branch: convert_config_values_to_strings
+  revision: 179cfa1379550f323116a1abaf613bd17cd29037
+  branch: development
   specs:
     figaro (1.0.0.rc1)
       thor (~> 0.14)
@@ -59,10 +59,10 @@ GEM
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
-    coffee-script (2.2.0)
+    coffee-script (2.3.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.7.0)
+    coffee-script-source (1.7.1)
     columnize (0.8.9)
     connection_pool (2.0.0)
     debug_inspector (0.0.2)
@@ -83,7 +83,7 @@ GEM
       launchy (~> 2.1)
       mail (~> 2.2)
     erubis (2.7.0)
-    excon (0.37.0)
+    excon (0.38.0)
     execjs (2.2.1)
     fog (1.22.0)
       fog-brightbox
@@ -94,9 +94,9 @@ GEM
       fog-core (~> 1.22)
       fog-json
       inflecto
-    fog-core (1.22.0)
+    fog-core (1.23.0)
       builder
-      excon (~> 0.33)
+      excon (~> 0.38)
       formatador (~> 0.2)
       mime-types
       net-scp (~> 1.1)
@@ -109,9 +109,9 @@ GEM
     foundation-rails (5.0.3.1)
       railties (>= 3.1.0)
       sass (>= 3.2.0)
-    hashie (2.1.2)
+    hashie (3.2.0)
     hike (1.2.3)
-    i18n (0.6.9)
+    i18n (0.6.11)
     inflecto (0.0.2)
     jbuilder (1.5.3)
       activesupport (>= 3.0.0)
@@ -151,11 +151,11 @@ GEM
       net-ssh (>= 2.6.5)
     net-ssh (2.9.1)
     newrelic_rpm (3.9.0.229)
-    nokogiri (1.6.2.1)
+    nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
     oauth (0.4.7)
-    omniauth (1.2.1)
-      hashie (>= 1.2, < 3)
+    omniauth (1.2.2)
+      hashie (>= 1.2, < 4)
       rack (~> 1.0)
     omniauth-oauth (1.0.1)
       oauth
@@ -218,12 +218,12 @@ GEM
     simple_form (3.0.2)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
-    simplecov (0.8.2)
+    simplecov (0.9.0)
       docile (~> 1.1.0)
       multi_json
       simplecov-html (~> 0.8.0)
     simplecov-html (0.8.0)
-    slop (3.5.0)
+    slop (3.6.0)
     sprockets (2.11.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -246,8 +246,8 @@ GEM
     turn (0.9.7)
       ansi
       minitest (~> 4)
-    tzinfo (0.3.39)
-    uglifier (2.5.1)
+    tzinfo (0.3.40)
+    uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     warden (1.2.3)

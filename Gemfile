@@ -4,7 +4,8 @@ ruby '2.1.0'
 gem 'browser-timezone-rails', '0.0.7'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'devise', '~> 3.2.2'
-gem 'figaro', github: 'sealocal/figaro', branch: 'convert_config_values_to_strings'
+# gem 'figaro', '1.0.0.rc1'
+gem 'figaro', github: 'sealocal/figaro', branch: 'development'
 #:git => 'https://github.com/rails/rails.git', :branch => '2-3-stable'
 gem 'fog', '1.22.0'
 gem "font-awesome-sass", "~> 4.0.3"
@@ -27,19 +28,18 @@ group :development do
   gem 'awesome_print'
   gem 'better_errors', '~> 1.1.0'
   gem 'debugger'
-  gem 'pry'
   gem 'sqlite3'
 end
 
 group :development, :test do
   gem 'binding_of_caller', '~> 0.7.2'
+  gem 'pry'
 end
 
 group :test do
   gem 'email_spec'
   gem 'launchy'
   gem 'minitest-rails-capybara'
-  gem 'pry'
   gem 'simplecov', require: false
   gem 'turn'
 end
