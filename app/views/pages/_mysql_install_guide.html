@@ -1,0 +1,100 @@
+<h1>How to Install MySQL on Mac OS X (Mavericks)</h1>
+<p>Posted: 5/5/14<p>
+
+<p>Since you're on a Mac, you can use homebrew:
+  <br />
+  <code>$ brew install mysql</code>
+</p>
+<p>You will see output like this:</p>
+
+<code>
+  To connect: mysql -uroot
+</code>
+<br />
+<code>
+  To have launchd start mysql at login:
+  ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
+</code>
+
+  Then to load mysql now:
+  launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
+
+  Or, if you don't want/need launchctl, you can just run:
+  mysql.server start
+  ==&gt; /usr/local/Cellar/mysql/5.6.17_1/bin/mysql_install_db --verbose --user=Home --basedir=/usr/local/Cellar/mysql/5.6.17_1 --datadir=/usr/local/var/mysql --tmpdir=/tmp
+  ==&gt; Summary
+  🍺  /usr/local/Cellar/mysql/5.6.17_1: 9510 files, 338M
+</code>
+
+  </li>
+  <li><p>Download the .dmg (x86-64)</p></li>
+  <li>Run the installer like any Mac app</li>
+  <li>A README.txt is included in the .dmg - you should read this one even if you     don't understand it.</li>
+  <li><p>Use the alias bash commands</p>
+
+    <ul>
+      <li><p>OR add '/usr/local/mysql/bin/mysql' to your 'PATH' environment</p></li>
+      <li><p>NOTE: If you check out the forums, posts are old. If you are looking for Ruby     related posts, you will probably be hesitant to trust the information in the    forums.</p></li>
+    </ul>
+  </li>
+  <li><p>Install the pref pane.</p></li>
+  <li>Start server from pref pane - button.</li>
+  <li><p>Test a database connection:</p>
+
+    <pre><code>$ mysql -u root test
+      mysql&gt; CREATE DATABASE;
+    </code></pre></li>
+    <li><p>View your users' priveleges:</p>
+
+      <pre><code>SELECT Host,
+        User,
+        Password,
+        Select_priv,
+        Update_priv,
+        Delete_priv,
+        Create_priv,
+        Drop_priv,
+        password_expired
+        FROM mysql.user;
+      </code></pre>
+
+      <ul>
+        <li><p>Notice only root users.</p></li>
+        <li><p>And blank users - these are anonymous users.</p></li>
+      </ul>
+
+
+      <p>GRANT all priveleges
+        ON sharetribe_developmnet.*
+        TO 'sharetribe'@'localhost'
+        IDENTIFIED BY 'password'</p></li>
+        <li><p>The mysql.db table holds access privelegs for your TEST db or any db that has a name beginning with "TEST_". View your TEST db users' access priveleges:</p>
+
+          <pre><code>select
+            Host,
+            Db,
+            User,
+            Select_priv,
+            Insert_priv,
+            Update_priv,
+            Delete_priv,
+            Create_priv,
+            Drop_priv,
+            Grant_priv
+            from mysql.db;
+          </code></pre></li>
+          <li><p>You should set a password for your root users, otherwise anyone can log in with root on those hosts, which will give them all priveleges on your database.</p>
+
+            <pre><code> $ mysql -u root
+             mysql&gt; SET PASSWORD FOR 'root'@'localhost' = PASSWORD('newpwd');
+             mysql&gt; SET PASSWORD FOR 'root'@'127.0.0.1' = PASSWORD('newpwd');
+             mysql&gt; SET PASSWORD FOR 'root'@'::1' = PASSWORD('newpwd');
+             mysql&gt; SET PASSWORD FOR 'root'@'%' = PASSWORD('newpwd');
+           </code></pre></li>
+           <li><p>You should also set passwords for your anonymous users:</p>
+
+            <pre><code> $ mysql -u root -p
+             Enter password: (enter root password here)
+             mysql&gt; SET PASSWORD FOR ''@'localhost' = PASSWORD('newpwd');
+             mysql&gt; SET PASSWORD FOR ''@'host_name' = PASSWORD('newpwd');
+           </code></pre></li>
