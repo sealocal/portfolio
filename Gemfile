@@ -4,11 +4,9 @@ ruby '2.1.0'
 gem 'browser-timezone-rails', '0.0.7'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'devise', '~> 3.2.2'
-# gem 'figaro', '1.0.0.rc1'
-gem 'figaro', github: 'sealocal/figaro', branch: 'development'
-#:git => 'https://github.com/rails/rails.git', :branch => '2-3-stable'
+gem 'figaro', '>= 1.0.0'
 gem 'fog', '1.22.0'
-gem "font-awesome-sass", "~> 4.0.3"
+gem 'font-awesome-sass', '~> 4.0.3'
 gem 'foundation-rails', '~> 5.0.3'
 gem 'jbuilder', '~> 1.2'
 gem 'jquery-rails'
@@ -52,7 +50,4 @@ end
 group :doc do
   gem 'sdoc', require: false
 end
-
-
-
 
