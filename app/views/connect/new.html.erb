@@ -1,4 +1,4 @@
-<%= render 'layouts/nav_bar' %>
+f<%= render 'layouts/nav_bar' %>
 
 <%= content_for (:info_text_line) do %>
   <br />
@@ -21,20 +21,20 @@
   </div>
 
   <div class="large-6 l column">
-    <%= form_for @message, url: connect_path, html: {id: "connect"} do |f| %>
+    <%= form_tag 'https://formkeep.com/f/880149ed0d5d', authenticity_token: false, id: "connect" do %>
       <div class="name-field">
-        <%= f.label(:name, "Name", class: "left") %>
-        <%= f.text_field :name, html: {class: "name-field", required: true, pattern: "[a-zA-Z]+"} %>
+        <%= label_tag :name, "Name", class: "left" %>
+        <%= text_field_tag :name, nil, html: {class: "name-field", required: true, pattern: "[a-zA-Z]+"} %>
       </div>
       <div class="email-field">
-        <%= f.label(:email, "Email", class: "left") %>
-        <%= f.text_field :email, html: {class: "email-field"}, required: true %>
+        <%= label_tag :email, "Email", class: "left" %>
+        <%= text_field_tag :email, nil, html: {class: "email-field"}, required: true %>
       </div>
       <div class="message-field">
-        <%= f.label(:message, "Message", class: "left") %>
-        <%= f.text_area :message, html: {class: "message-field", required: true, placeholder: "How can I help you?"} %>
+        <%= label_tag :message, "Message", class: "left" %>
+        <%= text_area_tag :message, nil, html: {class: "message-field", required: true, placeholder: "How can I help you?"} %>
         <br />
-        <%= f.submit "Submit", class: "left" %>
+        <%= submit_tag "Submit", class: "left" %>
       </div>
     <% end %>
   </div>
