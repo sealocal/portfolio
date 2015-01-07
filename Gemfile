@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.0'
+ruby '2.1.3'
 
 gem 'browser-timezone-rails', '0.0.7'
 gem 'coffee-rails', '~> 4.0.0'
@@ -14,7 +14,7 @@ gem 'minitest-rails'
 gem 'newrelic_rpm'
 gem 'omniauth-twitter'
 gem 'pundit', '0.2.1'
-gem 'rails', '4.0.2'
+gem 'rails', '4.1.6'
 gem 'redcarpet', '3.1.1'
 gem 'sass-rails', '~> 4.0.0'
 gem 'sidekiq', '3.0.2'
@@ -25,7 +25,6 @@ gem 'uglifier', '>= 1.3.0'
 group :development do
   gem 'awesome_print'
   gem 'better_errors', '~> 1.1.0'
-  gem 'debugger'
   gem 'sqlite3'
 end
 
