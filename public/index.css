@@ -1,0 +1,121 @@
+
+main {
+  margin: 2em 0.5em 0 0.5em;
+}
+
+.one-column, .two-columns {
+  float: left;
+}
+
+.one-column {
+  width: 33.333333%;
+}
+
+.two-columns {
+  width: 66.666667%;
+}
+
+@media (max-width: 939px) {
+  .one-column {
+    width: 100%;
+  }
+
+  .two-columns {
+    width: 100%;
+  }
+}
+
+#badge {
+  background-color: #fff;
+  height: 200px;
+  width: 300px;
+  border: 1px solid black;
+  border-radius: 2em;
+  transform: rotate(-10deg);
+  overflow: hidden;
+}
+
+#badge p {
+  text-align: center;
+}
+
+#badge #top-band {
+  background-color: rgb(228, 46, 46);
+}
+
+p#hello {
+  margin: 0;
+  border: 1px solid rgb(228, 46, 46);
+  padding-top: -;
+  font-family: 'Source Code Pro', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 2.2em;
+  line-height: 1em;
+  color: white;
+}
+
+p#my-name-is {
+  position: relative;
+  top: -5px;
+  margin: 0;
+  padding: 0 0 0 0;
+  font-family: 'Source Code Pro', Arial, sans-serif;
+  font-size: 1.1em;
+  line-height: 1em;
+  color: white;
+}
+
+p#name {
+  position: relative;
+  top: -15px;
+  font-family: 'Nothing You Could Do', courier, monospace;
+  font-weight: 900;
+  font-size: 3em;
+  transform: rotate(-15deg);
+}
+
+#badge #bottom-band {
+  position: relative;
+  top: -2em;
+  height: 2em;
+  background-color: rgb(228, 46, 46);
+}
+
+#social {
+  padding-left: 0;
+  text-align: center;
+  list-style: none;
+}
+
+#social li {
+  display: inline-block;
+  margin: 1em 2em;
+}
+
+@media (max-width: 612px) {
+  #social {
+    margin-top: 2em;
+  }
+
+  #social li {
+    margin: 1em 0;
+    width: 40%;
+  }
+}
+
+#social a {
+  color: black;
+  text-decoration: none;
+}
+
+.fa-stack-overflow.fa-5x {
+  position: relative;
+  top: -.2em;
+  padding: .2em;
+  font-size: 3em;
+  color: #fff;
+  background-color: #000;
+  border-radius: 0.2em;
+  width: 1em;
+  text-align: center;
+}
