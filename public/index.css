@@ -1,3 +1,7 @@
+body {
+  background-color: #eee;
+}
+
 main {
   margin: 2em 0.5em 0 0.5em;
 }
@@ -116,7 +120,7 @@ p#name {
   top: -.2em;
   padding: .2em;
   font-size: 3em;
-  color: #fff;
+  color: #eee;
   background-color: #000;
   border-radius: 0.2em;
   width: 1em;
