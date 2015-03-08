@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width; initial-scale=1.0">
   <style type="text/css">
-    body {
-      background-color: #efefef;
+    main {
+      margin: 2em 0.5em 0 0.5em;
     }
 
-    #badge, #social {
-      margin: 2em;
+    .one-column, .two-columns {
       float: left;
+    }
+
+    .one-column {
+      width: 33.333333%;
+    }
+
+    .two-columns {
+      width: 66.666667%;
+    }
+
+    @media (max-width: 939px) {
+      .one-column {
+        width: 100%;
+      }
+
+      .two-columns {
+        width: 100%;
+      }
     }
 
     #badge {
@@ -68,12 +86,25 @@
     }
 
     #social {
+      padding-left: 0;
+      text-align: center;
       list-style: none;
     }
 
     #social li {
       display: inline-block;
       margin: 1em 2em;
+    }
+
+    @media (max-width: 612px) {
+      #social {
+        margin-top: 2em;
+      }
+
+      #social li {
+        margin: 1em 0;
+        width: 40%;
+      }
     }
 
     #social a {
@@ -92,7 +123,6 @@
       width: 1em;
       text-align: center;
     }
-
   </style>
   <link href='http://fonts.googleapis.com/css?family=Nothing+You+Could+Do' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,900' rel='stylesheet' type='text/css'>
@@ -100,36 +130,39 @@
 </head>
 <body>
   <header>
-
   </header>
 
   <main>
 
-    <div id="badge">
-      <div id="top-band">
-        <p id="hello">HELLO</p>
-        <p id="my-name-is">my name is</p>
+    <div class="one-column">
+      <div id="badge">
+        <div id="top-band">
+          <p id="hello">HELLO</p>
+          <p id="my-name-is">my name is</p>
+        </div>
+        <p id="name">Mike Taylor</p>
+        <div id="bottom-band"></div>
       </div>
-      <p id="name">Mike Taylor</p>
-      <div id="bottom-band"></div>
     </div>
 
-    <ul id="social">
-      <li><a href="https://www.linkedin.com/in/miketayloreit">
-        <span class="fa fa-linkedin-square fa-5x"></span>
-      </a></li>
-      <li><a href="https://twitter.com/sea_local">
-        <span class="fa fa-twitter-square fa-5x"></span>
-      </a></li>
-      <li><a href="https://github.com/sealocal">
-        <span class="fa fa-github-square fa-5x"></span>
-      </a></li>
-      <li><a href="https://stackoverflow.com/users/3238292/sealocal">
-        <span class="fa fa-stack-overflow fa-5x"></span>
-      </a></li>
-    </ul>
-  </main>
+    <div class="two-columns">
+      <ul id="social">
+        <li><a href="https://www.linkedin.com/in/miketayloreit">
+          <span class="fa fa-linkedin-square fa-5x"></span>
+        </a></li>
+        <li><a href="https://twitter.com/sea_local">
+          <span class="fa fa-twitter-square fa-5x"></span>
+        </a></li>
+        <li><a href="https://github.com/sealocal">
+          <span class="fa fa-github-square fa-5x"></span>
+        </a></li>
+        <li><a href="https://stackoverflow.com/users/3238292/sealocal">
+          <span class="fa fa-stack-overflow fa-5x"></span>
+        </a></li>
+      </ul>
+    </div>
 
+  </main>
   <footer>
   </footer>
 </body>
