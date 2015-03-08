@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style type="text/css">
+    body {
+      background-color: #efefef;
+    }
+
+    #badge, #social {
+      margin: 2em;
+      float: left;
+    }
+
+    #badge {
+      background-color: #fff;
+      height: 200px;
+      width: 300px;
+      border: 1px solid black;
+      border-radius: 2em;
+      transform: rotate(-10deg);
+      overflow: hidden;
+    }
+
+    #badge p {
+      text-align: center;
+    }
+
+    #badge #top-band {
+      background-color: rgb(228, 46, 46);
+    }
+
+    p#hello {
+      margin: 0;
+      border: 1px solid rgb(228, 46, 46);
+      padding-top: -;
+      font-family: 'Source Code Pro', Arial, sans-serif;
+      font-weight: 900;
+      font-size: 2.2em;
+      line-height: 1em;
+      color: white;
+    }
+
+    p#my-name-is {
+      position: relative;
+      top: -5px;
+      margin: 0;
+      padding: 0 0 0 0;
+      font-family: 'Source Code Pro', Arial, sans-serif;
+      font-size: 1.1em;
+      line-height: 1em;
+      color: white;
+    }
+
+    p#name {
+      position: relative;
+      top: -15px;
+      font-family: 'Nothing You Could Do', courier, monospace;
+      font-weight: 900;
+      font-size: 3em;
+      transform: rotate(-15deg);
+    }
+
+    #badge #bottom-band {
+      position: relative;
+      top: -2em;
+      height: 2em;
+      background-color: rgb(228, 46, 46);
+    }
+
+    #social {
+      list-style: none;
+    }
+
+    #social li {
+      display: inline-block;
+      margin: 1em 2em;
+    }
+
+    #social a {
+      color: black;
+      text-decoration: none;
+    }
+
+    .fa-stack-overflow.fa-5x {
+      position: relative;
+      top: -.2em;
+      padding: .2em;
+      font-size: 3em;
+      color: #fff;
+      background-color: #000;
+      border-radius: 0.2em;
+      width: 1em;
+      text-align: center;
+    }
+
+  </style>
+  <link href='http://fonts.googleapis.com/css?family=Nothing+You+Could+Do' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,900' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+<body>
+  <header>
+
+  </header>
+
+  <main>
+
+    <div id="badge">
+      <div id="top-band">
+        <p id="hello">HELLO</p>
+        <p id="my-name-is">my name is</p>
+      </div>
+      <p id="name">Mike Taylor</p>
+      <div id="bottom-band"></div>
+    </div>
+
+    <ul id="social">
+      <li><a href="https://www.linkedin.com/in/miketayloreit">
+        <span class="fa fa-linkedin-square fa-5x"></span>
+      </a></li>
+      <li><a href="https://twitter.com/sea_local">
+        <span class="fa fa-twitter-square fa-5x"></span>
+      </a></li>
+      <li><a href="https://github.com/sealocal">
+        <span class="fa fa-github-square fa-5x"></span>
+      </a></li>
+      <li><a href="https://stackoverflow.com/users/3238292/sealocal">
+        <span class="fa fa-stack-overflow fa-5x"></span>
+      </a></li>
+    </ul>
+  </main>
+
+  <footer>
+  </footer>
+</body>
+</html>
