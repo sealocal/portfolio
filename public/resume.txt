@@ -1,0 +1,95 @@
+================================================================================================
+Mike Taylor, BS, EIT                                                                January 2014
+Seattle, WA
+
+
+www.miketaylor.io
+github.com/sealocal
+linkedin.com/in/miketayloreit
+twitter.com/sea_local
+================================================================================================
+
+I am a web software developer, proficient in Ruby and Rails.
+
+Stack
+*****
+
+Ruby, Rails, HTML, Haml, RSpec, CSS, Sass, JavaScript, jQuery, Git, Heroku
+
+
+
+Professional Experience
+***********************
+
+ Owner, Developer, Creator          EncounterCounter.com                      Jun 2014 - Present
+ -----------------------------------------------------------------------------------------------
+ - Developed a role-based, mobile-first web app with Ruby on Rails and jQuery Mobile
+ - Integrated Stripe payments, with subscription plans and a 45-days, no credit card, free trial
+ - Created a landing page using a micro CSS grid and boilerplate named Skeleton.css
+
+
+ Ruby on Rails Developer             HFA                                     Sep 2014 - Dec 2014
+ -----------------------------------------------------------------------------------------------
+ - Developed a Ruby on Rails web application for the purpose of managing documents
+ that belong to organization scopes, accessible by users with authorized permission levels
+ - Translated the clients user stories into code, including the database, mailers, and UI
+ - Applied Bootstrap UI style, a perfect fit for a healthcare and government domain utility app
+ - Ensured unit test coverage for Rails Controllers and Models with RSpec and SimpleCov
+
+
+ Associate Project Manager           The Conco Companies                     Sep 2012 - Jun 2013
+ -----------------------------------------------------------------------------------------------
+ - Communicated between stakeholders, including: internal CAD team, project managers,
+ and general contractors, and construction crew to facilitate timely building construction
+ - Reviewed internal construction drawings for technical discrepancies and clarified
+ specification, saving the company and client thousands of dollars in costly labor
+
+
+ GIS Tech/Data Analyst              Parsons Brinckerhoff                     Oct 2010 - Jun 2012
+ -----------------------------------------------------------------------------------------------
+ - Composed SQL queries with tables containing 1,000,000+ records for data comparison,
+ quality review, and prioritization
+ - Communicated with an Agile team of management, software engineers, and programmers
+ to implement automated GIS data workflows, reducing hundreds of hours in manual review
+ - Created summaries and status reports to inform decisions about staffing resources
+
+
+
+Projects
+********
+
+XMLFileRenamer (github.com/sealocal/xml_file_renamer)                                  Apr 2014
+-----------------------------------------------------------------------------------------------
+I created a FileRenamer class to rename 2,900 XML files for my TideData project.
+The string name I needed was a text node in the XML. Give the executable command
+line arguments of a directory path and space-delimited tag names to rename XML
+files. Check out the awesome README for details.
+
+TideData.com (github.com/sealocal/tide-data-rails)                                     Apr 2014
+-----------------------------------------------------------------------------------------------
+Provides high and low tide for any day, given a particular location. I wrote a
+data scraper for NOAA’s published tide predictions for this project. In the future,
+I will add maps, switch to using a database model instead of XML files, then
+possibly switch to an API integration.
+
+
+
+Education
+*********
+
+Code Fellows - Certificate in Ruby on Rails Development (MAR 2014)
+University of Washington - CSE 142 Programming I (Java) (AUG 2013)
+University of Florida - B.S. in Civil Engineering, cum laude (MAY 2009)
+
+
+
+Tech Sector Skills
+******************
+
+GitHub, BitBucket, Stripe API, SQL, XML, Java, Web Development, TDD,
+Landing Pages, Bootstrap, Business, Bootsrapping, Technical Writing,
+Technical Communication, SaaS Products
+
+-------------------------------------------------------------------------------------------------
+
+
