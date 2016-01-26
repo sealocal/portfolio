@@ -1,6 +1,0 @@
-yr:
-  time:
-    formats:
-      default: "%d/%m/%Y %H:%M:%S %z"
-      short: "%e %B, %H:%M"
-      long: "%B %d, %Y %H:%M"
