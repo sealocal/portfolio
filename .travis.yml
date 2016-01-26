@@ -1,8 +1,0 @@
-language: ruby
-rvm:
-  - 2.1.0
-deploy:
-  provider: heroku
-  app: mikes-cf-portfolio
-  api_key:
-    secure: QyJP4EdcXtk7qrR34DJ5r9iblem81njCvEo+ER889IJU14PK2q2COnSTYwpogGGPv4bnCRcubQYGEOl4YSkIoK9uWuGTA+Pcs0uf4RfrzcFhtWoXkF3iDdL7LMCnM8C9ojPCVzCj7WFZUFl2LpjmhVwAUs4PqVINYTqi5Z3cI+c=
