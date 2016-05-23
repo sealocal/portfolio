@@ -32,16 +32,16 @@
 
     <div class="two-columns">
       <ul id="social">
-        <li><a href="https://www.linkedin.com/in/miketayloreit">
+        <li><a href="https://www.linkedin.com/in/miketayloreit" onclick="trackOutboundLink('https://www.linkedin.com/in/miketayloreit'); return false;">
           <span class="fa fa-linkedin-square fa-5x"></span>
         </a></li>
-        <li><a href="https://twitter.com/sea_local">
+        <li><a href="https://twitter.com/sea_local" onclick="trackOutboundLink('https://twitter.com/sea_local'); return false;">
           <span class="fa fa-twitter-square fa-5x"></span>
         </a></li>
-        <li><a href="https://github.com/sealocal">
+        <li><a href="https://github.com/sealocal" onclick="trackOutboundLink('https://github.com/sealocal'); return false;">
           <span class="fa fa-github-square fa-5x"></span>
         </a></li>
-        <li><a href="https://stackoverflow.com/users/3238292/sealocal">
+        <li><a href="https://stackoverflow.com/users/3238292/sealocal" onclick="trackOutboundLink('https://stackoverflow.com/users/3238292/sealocal'); return false;">
           <span class="fa fa-stack-overflow fa-5x"></span>
         </a></li>
       </ul>
@@ -58,6 +58,14 @@
 
     ga('create', 'UA-53272017-1', 'auto');
     ga('send', 'pageview');
+  </script>
+  <script>
+    var trackOutboundLink = function(url) {
+       ga('send', 'event', 'outbound', 'click', url, {
+         'transport': 'beacon',
+         'hitCallback': function(){document.location = url;}
+       });
+    }
   </script>
 </body>
 </html>
