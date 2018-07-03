@@ -2,20 +2,16 @@ body {
   background-color: #eee;
 }
 
-main {
-  margin: 2em 0.5em 0 0.5em;
-}
-
-.one-column, .two-columns {
-  float: left;
+.column {
+  display: inline-block;
 }
 
 .one-column {
-  width: 33.333333%;
+  width: 33%;
 }
 
 .two-columns {
-  width: 66.666667%;
+  width: 66%;
 }
 
 @media (max-width: 939px) {
@@ -32,7 +28,7 @@ main {
   background-color: #fff;
   height: 200px;
   width: 300px;
-  margin-left: 1em;
+  margin: 2em 0 0 2em;
   border: 1px solid black;
   border-radius: 2em;
   -webkit-transform: rotate(-10deg);
@@ -137,8 +133,8 @@ p#name {
 footer {
   z-index: -1;
   box-sizing: border-box;
+  margin-top: 2em;
   width: 100%;
-  position: fixed;
   bottom: 0;
   padding: 0 2em 2em 0;
   text-align: right;
