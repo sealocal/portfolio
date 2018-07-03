@@ -32,6 +32,7 @@ main {
   background-color: #fff;
   height: 200px;
   width: 300px;
+  margin-left: 1em;
   border: 1px solid black;
   border-radius: 2em;
   -webkit-transform: rotate(-10deg);
@@ -87,9 +88,12 @@ p#name {
   background-color: rgb(228, 46, 46);
 }
 
+#social, #learn-more-container {
+  text-align: center;
+}
+
 #social {
   padding-left: 0;
-  text-align: center;
   list-style: none;
 }
 
@@ -124,4 +128,18 @@ p#name {
   border-radius: 0.2em;
   width: 1em;
   text-align: center;
+}
+
+#learn-more-container a {
+  color: blue;
+}
+
+footer {
+  z-index: -1;
+  box-sizing: border-box;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  padding: 0 2em 2em 0;
+  text-align: right;
 }
