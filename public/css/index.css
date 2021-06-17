@@ -113,6 +113,7 @@ p#name {
   text-decoration: none;
 }
 
+.fa-angellist.fa-5x,
 .fa-stack-overflow.fa-5x {
   position: relative;
   top: -.2em;
