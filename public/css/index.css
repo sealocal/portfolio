@@ -97,6 +97,16 @@ p#name {
   margin: 1em 2em;
 }
 
+#tech-stack {
+  margin-top: 2em;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+#tech-stack li {
+  margin-left: 1em;
+}
+
 @media (max-width: 612px) {
   #social {
     margin-top: 2em;
