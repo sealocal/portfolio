@@ -8,7 +8,12 @@
       "Gemfile",
       "Gemfile.lock",
       "config.ru"
-    ]
+    ],
+    "rewrites": [ {
+      "source": "/helloWorld",
+      "function": "helloWorld",
+      "region": "us-west1"
+    } ]
   },
   "functions": [
     {
