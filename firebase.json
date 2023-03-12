@@ -9,21 +9,28 @@
       "Gemfile.lock",
       "config.ru"
     ],
-    "rewrites": [ {
-      "source": "/helloWorld",
-      "function": "helloWorld",
-      "region": "us-west1"
-    },
-    {
-      "source": "/date",
-      "function": "date",
-      "region": "us-west1"
-    },
-    {
-      "source": "/getCopyRightSpan",
-      "function": "getCopyRightSpan",
-      "region": "us-west1"
-    } ]
+    "rewrites": [
+      {
+        "source": "/helloWorld",
+        "function": "helloWorld",
+        "region": "us-west1"
+      },
+      {
+        "source": "/date",
+        "function": "date",
+        "region": "us-west1"
+      },
+      {
+        "source": "/getCopyRightSpan",
+        "function": "getCopyRightSpan",
+        "region": "us-west1"
+      },
+      {
+        "source": "/getAppleMapScript",
+        "function": "getAppleMapScript",
+        "region": "us-west1"
+      }
+    ]
   },
   "functions": [
     {

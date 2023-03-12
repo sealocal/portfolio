@@ -79,6 +79,7 @@
         </a></li>
       </ul>
       <!-- <div id="learn-more-container"></div> -->
+      <div id="apple-map"></div>
     </div>
   </main>
   <footer>
@@ -115,6 +116,21 @@
          'hitCallback': function(){document.location = url;}
        });
     }
+  </script>
+  <script>
+    fetch("/getAppleMapScript")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        return response.text();
+      })
+      .then((appleMapScript) => {
+        const scriptTag = document.createElement("script");
+        scriptTag.textContent = appleMapScript;
+        document.body.appendChild(scriptTag);
+      });
   </script>
   <script>
     const footer = document.querySelector("footer");

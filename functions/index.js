@@ -25,3 +25,11 @@ exports.getCopyRightSpan = functions.
         <span>© ${fullYear}</span>
       `);
     });
+
+exports.getAppleMapScript = functions.
+    region("us-west1").https.onRequest((req, res) => {
+      res.status(200).send(`
+          const appleMap = document.getElementById("apple-map");
+          console.log(appleMap);
+      `);
+    });
