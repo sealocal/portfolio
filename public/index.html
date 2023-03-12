@@ -82,7 +82,8 @@
     </div>
   </main>
   <footer>
-    <span>&copy; 2023</span>
+    <!-- Use Firebase Functions /getCopyRightSpan to fetch current year -->
+    <!-- <span>&copy; 2023</span> -->
   </footer>
   <!-- React Libraries -->
   <script src="https://unpkg.com/react@16.4.1/umd/react.production.min.js" crossorigin></script>
@@ -114,6 +115,20 @@
          'hitCallback': function(){document.location = url;}
        });
     }
+  </script>
+  <script>
+    const footer = document.querySelector("footer");
+    fetch("/getCopyRightSpan")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        return response.text();
+      })
+      .then((copyRightSpan) => {
+        footer?.insertAdjacentHTML('beforeend', copyRightSpan);
+      });
   </script>
 </body>
 </html>
