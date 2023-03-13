@@ -34,8 +34,8 @@
   },
   "functions": [
     {
-      "source": "functions",
-      "codebase": "default",
+      "source": "firebase-functions",
+      "codebase": "firebase-functions",
       "ignore": [
         "node_modules",
         ".git",
