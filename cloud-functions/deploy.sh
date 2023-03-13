@@ -1,1 +1,1 @@
-gcloud functions deploy get-apple-map-service-token-ruby --region us-west1 --source . --trigger-http --runtime ruby32 --gen2 --entry-point hello_http --memory 128Mi
+gcloud functions deploy get-apple-map-service-token-ruby --region us-west1 --allow-unauthenticated --source . --trigger-http --runtime ruby32 --gen2 --entry-point get_apple_map_service_token_ruby --memory 128Mi
