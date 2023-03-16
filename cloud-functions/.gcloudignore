@@ -4,3 +4,6 @@ secrets/
 # environment
 .env
 .env.yaml
+
+# shell scripts
+shell-scripts/
