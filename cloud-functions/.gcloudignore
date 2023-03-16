@@ -1,0 +1,6 @@
+# secrets
+secrets/
+
+# environment
+.env
+.env.yaml
