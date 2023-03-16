@@ -29,11 +29,13 @@ module AppleMapService
         sub: SERVICE_ID,
       }, encrypted_private_key, 'ES256', {
         kid: KEY_ID,
+        typ: "JWT",
         id: "#{TEAM_ID}.#{SERVICE_ID}",
       })
 
-      # val = ::JWT.decode jwt, encrypted_private_key, true, { algorithm: 'ES256' }
-      # STDOUT.puts val
+      # debug
+      # jwt = ::JWT.decode jwt, encrypted_private_key, true, { algorithm: 'ES256' }
+      # jwt = jwt.to_json
 
       jwt
     end
