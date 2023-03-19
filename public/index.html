@@ -20,6 +20,8 @@
   <!-- End Google Tag Manager -->
   <meta name="author" content="Mike Taylor">
   <meta name="description" content="Mike Taylor's personal home page. Mike Taylor is a Ruby on Rails web developer.">
+
+  <script src="https://cdn.apple-mapkit.com/mk/5.x.x/mapkit.js"></script>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -58,28 +60,30 @@
         </a></li>
       </ul>
     </div>
-    <div class="column two-columns">
-      <ul id="tech-stack">
-        <p>Contact me for web development and software engineering help.</p>
-        <p>My tech stack includes:</p>
-        <li><a href="https://www.linkedin.com/in/miketayloreit">
-          Ruby on Rails
-        </a></li>
-        <li><a href="https://www.linkedin.com/in/miketayloreit">
-          React
-        </a></li>
-        <li><a href="https://www.linkedin.com/in/miketayloreit">
-          NodeJS
-        </a></li>
-        <li><a href="https://www.linkedin.com/in/miketayloreit">
-          Docker
-        </a></li>
-        <li><a href="https://www.linkedin.com/in/miketayloreit">
-          AWS
-        </a></li>
-      </ul>
+    <div class="flex-container">
+      <div id="tech-stack" class="half-width">
+      <p>Contact me for web development and software engineering help.</p>
+      <p>My tech stack includes:</p>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/miketayloreit">
+            Ruby on Rails
+          </a></li>
+          <li><a href="https://www.linkedin.com/in/miketayloreit">
+            React
+          </a></li>
+          <li><a href="https://www.linkedin.com/in/miketayloreit">
+            NodeJS
+          </a></li>
+          <li><a href="https://www.linkedin.com/in/miketayloreit">
+            Docker
+          </a></li>
+          <li><a href="https://www.linkedin.com/in/miketayloreit">
+            AWS
+          </a></li>
+        </ul>
+      </div>
+      <div id="apple-map" class="half-width"></div>
       <!-- <div id="learn-more-container"></div> -->
-      <div id="apple-map"></div>
     </div>
   </main>
   <footer>
@@ -145,6 +149,38 @@
       .then((copyRightSpan) => {
         footer?.insertAdjacentHTML('beforeend', copyRightSpan);
       });
+  </script>
+  <script>
+      fetch("https://get-apple-map-service-token-ruby-4jc3g3avkq-uw.a.run.app")
+          .then(response => {
+              if (!response.ok) {
+                  throw new Error(`HTTP error! Status: ${response.status}`);
+              }
+
+              return response.text();
+          })
+          .then(jwt => {
+              console.log(jwt);
+              mapkit.init({
+                  authorizationCallback: function(done) {
+                      done(jwt);
+                  }
+              });
+          })
+          .catch(error => console.log(error));
+
+      const latitude = 47.6037757,
+            longitude = -122.3307651;
+      const coordinates = new mapkit.Coordinate(latitude, longitude);
+      const region = new mapkit.CoordinateRegion(
+        coordinates,
+        new mapkit.CoordinateSpan(0.1, 0.1)
+      );
+      const map = new mapkit.Map('apple-map', {
+          // center: coordinates,
+          region: region
+      });
+
   </script>
 </body>
 </html>

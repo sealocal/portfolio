@@ -6,6 +6,17 @@ body {
   display: inline-block;
 }
 
+.flex-container {
+  margin-top: 3em;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-evenly;
+}
+
+.flex-container .half-width  {
+  width: 33%;
+}
+
 .one-column {
   width: 33%;
 }
@@ -97,14 +108,18 @@ p#name {
   margin: 1em 2em;
 }
 
-#tech-stack {
-  margin-top: 2em;
-  margin-left: 15%;
-  margin-right: 15%;
-}
-
 #tech-stack li {
   margin-left: 1em;
+}
+
+#apple-map {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+  background-color: #ffffff;
+}
+
+#apple-map,
+#apple-map canvas {
+  border-radius: .75em;
 }
 
 @media (max-width: 612px) {
