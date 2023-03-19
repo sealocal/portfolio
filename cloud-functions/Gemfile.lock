@@ -7,8 +7,8 @@ GEM
       puma (>= 4.3.0, < 6.a)
       rack (~> 2.1)
     jwt (2.7.0)
-    nio4r (2.5.7)
-    puma (5.3.2)
+    nio4r (2.5.8)
+    puma (5.6.5)
       nio4r (~> 2.0)
     rack (2.2.3)
 
