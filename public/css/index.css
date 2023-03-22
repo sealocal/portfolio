@@ -2,6 +2,14 @@ body {
   background-color: #eee;
 }
 
+
+/* Debug */
+/*
+* {
+  outline: 1px solid red;
+}
+*/
+
 .column {
   display: inline-block;
 }
@@ -113,6 +121,7 @@ p#name {
 }
 
 #apple-map {
+  height: 15em;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
   background-color: #ffffff;
 }
