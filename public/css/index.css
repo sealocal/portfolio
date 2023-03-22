@@ -145,6 +145,11 @@ p#name {
 }
 
 @media (max-width: 612px) {
+  #badge {
+    scale: 95%;
+    margin: 2em auto;
+  }
+
   #social {
     margin-top: 2em;
   }
