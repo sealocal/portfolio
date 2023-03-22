@@ -41,6 +41,19 @@ body {
   .two-columns {
     width: 100%;
   }
+
+  #tech-stack {
+    margin: 0 10%;
+  }
+
+  .flex-container {
+    display: block;
+  }
+
+  .flex-container .half-width {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 #badge {
@@ -134,6 +147,14 @@ p#name {
 @media (max-width: 612px) {
   #social {
     margin-top: 2em;
+  }
+
+  #tech-stack {
+    margin: 0 10%;
+  }
+
+  .flex-container {
+    display: block;
   }
 
   #social li {
