@@ -23,6 +23,7 @@ body {
 
 .flex-container .half-width  {
   width: 33%;
+  margin: 3em auto;
 }
 
 .one-column {
@@ -31,29 +32,6 @@ body {
 
 .two-columns {
   width: 66%;
-}
-
-@media (max-width: 939px) {
-  .one-column {
-    width: 100%;
-  }
-
-  .two-columns {
-    width: 100%;
-  }
-
-  #tech-stack {
-    margin: 0 10%;
-  }
-
-  .flex-container {
-    display: block;
-  }
-
-  .flex-container .half-width {
-    width: 80%;
-    margin: 0 auto;
-  }
 }
 
 #badge {
@@ -159,30 +137,6 @@ p#name {
   border-radius: .75em;
 }
 
-@media (max-width: 612px) {
-  #badge {
-    scale: 95%;
-    margin: 2em auto;
-  }
-
-  #social {
-    margin-top: 2em;
-  }
-
-  #tech-stack {
-    margin: 0 10%;
-  }
-
-  .flex-container {
-    display: block;
-  }
-
-  #social li {
-    margin: 1em 0;
-    width: 40%;
-  }
-}
-
 #social a {
   color: black;
   text-decoration: none;
@@ -213,4 +167,60 @@ footer {
   bottom: 0;
   padding: 0 2em 2em 0;
   text-align: right;
+}
+
+
+@media (max-width: 939px) {
+  .one-column {
+    width: 100%;
+  }
+
+  .two-columns {
+    width: 100%;
+  }
+
+  #tech-stack {
+    margin: 0 10%;
+  }
+
+  #google-map {
+    height: 15em;
+  }
+
+  .flex-container {
+    display: block;
+  }
+
+  .flex-container .half-width {
+    width: 80%;
+    margin: 3em auto;
+  }
+}
+
+@media (max-width: 612px) {
+  #badge {
+    scale: 95%;
+    margin: 3em auto;
+  }
+
+  #social {
+    margin-top: 2em;
+  }
+
+  #tech-stack {
+    margin: 0 10%;
+  }
+
+  #google-map {
+    height: 15em;
+  }
+
+  .flex-container {
+    display: block;
+  }
+
+  #social li {
+    margin: 1em 0;
+    width: 40%;
+  }
 }
