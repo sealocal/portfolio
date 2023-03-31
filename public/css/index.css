@@ -26,19 +26,11 @@ body {
   margin: 3em auto;
 }
 
-.one-column {
-  width: 33%;
-}
-
-.two-columns {
-  width: 66%;
-}
-
 #badge {
   background-color: #fff;
   height: 200px;
   width: 300px;
-  margin: 2em 0 0 2em;
+  margin: 1em 0 0 4em;
   border: 1px solid black;
   border-radius: 2em;
   -webkit-transform: rotate(-10deg);
@@ -93,18 +85,19 @@ p#name {
   background-color: rgb(228, 46, 46);
 }
 
-#social, #learn-more-container {
-  text-align: center;
-}
-
 #social {
-  padding-left: 0;
+  width: 50%;
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
   list-style: none;
+  align-items: stretch;
+  justify-content: space-evenly;
 }
 
 #social li {
-  display: inline-block;
-  margin: 1em 2em;
+  display: flex;
+  align-self: center;
 }
 
 #tech-stack {
@@ -144,8 +137,7 @@ p#name {
 
 .fa-angellist.fa-5x,
 .fa-stack-overflow.fa-5x {
-  position: relative;
-  top: -.2em;
+  top: .15em;
   padding: .2em;
   font-size: 3em;
   color: #eee;
@@ -153,10 +145,6 @@ p#name {
   border-radius: 0.2em;
   width: 1em;
   text-align: center;
-}
-
-#learn-more-container a {
-  color: blue;
 }
 
 footer {
@@ -171,12 +159,17 @@ footer {
 
 
 @media (max-width: 939px) {
-  .one-column {
-    width: 100%;
+  #badge {
+    margin-bottom: 4em;
   }
 
-  .two-columns {
-    width: 100%;
+  #social {
+    width: initial;
+    margin: 2em 10%;
+  }
+
+  #social li {
+    margin: 1em auto;
   }
 
   #tech-stack {
@@ -201,6 +194,7 @@ footer {
   #badge {
     scale: 95%;
     margin: 3em auto;
+    margin-bottom: 4em;
   }
 
   #social {
@@ -217,10 +211,5 @@ footer {
 
   .flex-container {
     display: block;
-  }
-
-  #social li {
-    margin: 1em 0;
-    width: 40%;
   }
 }
