@@ -23,7 +23,7 @@ body {
 
 .flex-container .half-width  {
   width: 33%;
-  margin: 3em auto;
+  margin: 0 auto;
 }
 
 #badge {
@@ -178,6 +178,7 @@ footer {
 
   #google-map {
     height: 15em;
+    margin-top: 3em;
   }
 
   .flex-container {
@@ -186,14 +187,14 @@ footer {
 
   .flex-container .half-width {
     width: 80%;
-    margin: 3em auto;
+    margin: 0 auto;
   }
 }
 
 @media (max-width: 612px) {
   #badge {
     scale: 95%;
-    margin: 3em auto;
+    margin: 0 auto;
     margin-bottom: 4em;
   }
 
